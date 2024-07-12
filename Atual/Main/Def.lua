@@ -31,7 +31,7 @@ storage.buff = newText
 end)
 
 macro(1000, 'Buff1', function()
-  say(storage.buff))
+  say(storage.buff)
 end)
 
 UI.Label('Buff2')
