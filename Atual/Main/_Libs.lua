@@ -9,6 +9,9 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Chino') then
         setvocchino()
       end
+      if text:find('Madara') then
+        setvocmadara()
+      end
     end
   end
 end)
