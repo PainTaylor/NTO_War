@@ -1,6 +1,6 @@
 setDefaultTab("HP")
 storage.exaustheal = now
-storage.healspell = 'super regeneration'
+storage.healspell = 'big regeneration'
 healmacro = macro(200, 'heal', function()
   if hppercent() < 99 and storage.exaustheal < now then
     say(storage.healspell)
