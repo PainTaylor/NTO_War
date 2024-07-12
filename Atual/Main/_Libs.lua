@@ -16,7 +16,7 @@ onTalk(function(name, level, mode, text, channelId, pos)
         setvocshisui()
       end
       if text:find('Tobirama') then
-        setvocshisui()
+        setvoctobirama()
       end
     end
   end
