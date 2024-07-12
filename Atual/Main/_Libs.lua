@@ -29,6 +29,7 @@ setvocsasuke = function()
   storage.ultimate = 'Susanoo Kagutsuchi'
   storage.fugaspell = 'Senjutsu no susanoo'
   storage.AOE = 'Fenikkusufurawatekunikku'
+  info('Load: Sasuke')
 end
 
 
@@ -42,4 +43,5 @@ setvocchino = function()
   storage.ultimate = 'Ketsueki kanri'
   storage.fugaspell = nil
   storage.AOE = 'Shabontama ninjutsu'
+  info('Load: Chino')
 end
