@@ -40,6 +40,6 @@ setvocchino = function()
   storage.magiacombo5 = 'Genjutsu torappu'
   storage.special = 'Genjutsu: Ketsuryugan'
   storage.ultimate = 'Ketsueki kanri'
-  storage.fugaspell = 'Senjutsu no susanoo'
-  storage.AOE = 'Fenikkusufurawatekunikku'
+  storage.fugaspell = nil
+  storage.AOE = 'Shabontama ninjutsu'
 end
