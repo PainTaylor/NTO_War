@@ -25,6 +25,24 @@ end)
 
 UI.Separator()
 
+UI.Label('Buff')
+UI.TextEdit(storage.buff or "Buff", function(widget, newText)
+storage.buff = newText
+end)
+
+macro(1000, 'Buff1', function()
+  say(storage.buff))
+end)
+
+UI.Label('Buff2')
+UI.TextEdit(storage.buff2 or "Buff", function(widget, newText)
+storage.buff2 = newText
+end)
+
+macro(1000, 'Buff2', function()
+  say(storage.buff2)
+end)
+
 UI.Label('HP AutoFuga')
 UI.TextEdit(storage.SpecialHP or "60", function(widget, newText)
 storage.SpecialHP = newText
