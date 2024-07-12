@@ -52,3 +52,16 @@ setvocchino = function()
   storage.AOE = 'Shabontama ninjutsu'
   info('Load: Chino')
 end
+
+setvocmadara = function()
+    storage.magiacombo1 = 'Akuma no zo no kusari'
+  storage.magiacombo2 = 'Yasaka Magatama'
+  storage.magiacombo3= 'Madara: kamui'
+  storage.magiacombo4 = 'Ki no ryu'
+  storage.magiacombo5 = ''
+  storage.special = 'Madara: Chibaku Tensei'
+  storage.ultimate = 'Pafekutosusanoo'
+  storage.fugaspell = 'Limbo'
+  storage.AOE = 'Gureto fureimu furawa'
+  info('Load: Madara')
+end
