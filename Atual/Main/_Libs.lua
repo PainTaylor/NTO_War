@@ -12,6 +12,12 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Madara') then
         setvocmadara()
       end
+      if text:find('Shisui') then
+        setvocshisui()
+      end
+      if text:find('Tobirama') then
+        setvocshisui()
+      end
     end
   end
 end)
@@ -35,9 +41,9 @@ setvocsasuke = function()
   storage.magiacombo3= 'Fureimurappufaia'
   storage.magiacombo4 = 'Kurohomura no maiso'
   storage.magiacombo5 = ''
-  storage.special = 'Utsushi wa me no kyosei'
-  storage.ultimate = 'Susanoo Kagutsuchi'
-  storage.fugaspell = 'Senjutsu no susanoo'
+  storage.special1 = 'Utsushi wa me no kyosei'
+  storage.special2 = 'Susanoo Kagutsuchi'
+  storage.special3 = 'Senjutsu no susanoo'
   storage.AOE = 'Fenikkusufurawatekunikku'
   info('Load: Sasuke')
 end
@@ -49,9 +55,9 @@ setvocchino = function()
   storage.magiacombo3= 'Raizu obu za Buraddo doragon'
   storage.magiacombo4 = 'Genjutsu torappu'
   storage.magiacombo5 = ''
-  storage.special = 'Genjutsu: Ketsuryugan'
-  storage.ultimate = 'Ketsueki kanri'
-  storage.fugaspell = nil
+  storage.special1 = 'Genjutsu: Ketsuryugan'
+  storage.special2 = 'Ketsueki kanri'
+  storage.special3 = nil
   storage.AOE = 'Shabontama ninjutsu'
   info('Load: Chino')
 end
@@ -62,9 +68,37 @@ setvocmadara = function()
   storage.magiacombo3= 'Madara: kamui'
   storage.magiacombo4 = 'Ki no ryu'
   storage.magiacombo5 = ''
-  storage.special = 'Madara: Chibaku Tensei'
-  storage.ultimate = 'Pafekutosusanoo'
-  storage.fugaspell = 'Limbo'
+  storage.special1 = 'Madara: Chibaku Tensei'
+  storage.special2 = 'Pafekutosusanoo'
+  storage.special3 = 'Limbo'
   storage.AOE = 'Gureto fureimu furawa'
   info('Load: Madara')
+end
+
+setvocshisui = function()
+    storage.magiacombo1 = 'Susanoo Barrage'
+  storage.magiacombo2 = 'Kotoamatsukami'
+  storage.magiacombo3= 'Magen Kasegui no Jutsu'
+  storage.magiacombo4 = 'Katon Houenka'
+  storage.magiacombo5 = ''
+  storage.special1 = 'Tsukuyomi no Jutsu'
+  storage.special2 = 'Shokanamatsukami'
+  storage.special3 = 'Susanoo Tsukumo'
+  storage.AOE = 'Shunka Shuto'
+  info('Load: Shisui')
+end
+
+setvoctobirama = function()
+    storage.magiacombo1 = 'Suiton Suidanha'
+  storage.magiacombo2 = 'Suiton Suishoha'
+  storage.magiacombo3= 'Suiton Teppodama'
+  storage.magiacombo4 = 'Suiton Suikosogyoku no Jutsu'
+  storage.magiacombo5 = ''
+  storage.special1 = 'Gottsunko'
+  storage.special2 = 'Kokuangyo no Jutsu'
+  storage.special3 = ''
+  storage.fugaspell = ''
+  storage.buff = 'Mawashi no Jutsu'
+  storage.AOE = 'Dai Suiton Dragon no Jutsu'
+  info('Load: Shisui')
 end

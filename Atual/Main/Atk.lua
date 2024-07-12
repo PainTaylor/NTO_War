@@ -48,35 +48,21 @@ end)
 onKeyPress(function(keys)
     if storage.ultimate == nil or modules.game_console:isChatEnabled() then return end
     if keys == 'R' then
-        say(storage.ultimate)
+        say(storage.special1)
     end
 end)
 
 onKeyPress(function(keys)
     if storage.special == nil or modules.game_console:isChatEnabled() then return end
     if keys == 'F' then
-        say(storage.special)
+        say(storage.special2)
     end
 end)
 
 onKeyPress(function(keys)
-    if storage.magia1 == nil or modules.game_console:isChatEnabled() then return end
-    if keys == '1' then
-        say(storage.magia1)
-    end
-end)
-
-onKeyPress(function(keys)
-    if storage.magia2 == nil or modules.game_console:isChatEnabled() then return end
-    if keys == '2' then
-        say(storage.magia2)
-    end
-end)
-
-onKeyPress(function(keys)
-    if storage.magia3 == nil or modules.game_console:isChatEnabled() then return end
-    if keys == '3' then
-        say(storage.magia3)
+    if storage.special == nil or modules.game_console:isChatEnabled() then return end
+    if keys == 'X' then
+        say(storage.special3)
     end
 end)
 
