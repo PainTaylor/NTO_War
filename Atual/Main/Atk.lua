@@ -1,11 +1,14 @@
 setDefaultTab("Atk")
-combo = function()
-	say(storage.magiacombo1)
-	say(storage.magiacombo2)
-	say(storage.magiacombo3)
-	say(storage.magiacombo4)
-	say(storage.magiacombo5)
+
+local function Combo()
+ if not g_game.isAttacking() then return false end
+  say(storage.magiacombo1)
+  say(storage.magiacombo2)
+  say(storage.magiacombo3)
+  say(storage.magiacombo4)
+  say(storage.magiacombo5)
 end
+
 storage.atkdelay = now
 macro(200, 'combo', function()
   if not g_game.isAttacking() then return end
@@ -14,6 +17,27 @@ macro(200, 'combo', function()
   end
 end)
 
+
+local timeArea
+local MonstersCount
+macro(1, 'Anti-Red', function()
+ MonstersCount = 0
+ for _, x in ipairs(getSpectators(true)) do
+  local checkPosz = math.abs(x:getPosition().z - player:getPosition().z)
+  if checkPosz <= 3 then
+   if (x:isPlayer() and x ~= player and x:getEmblem() ~= 1 and x:getShield() < 3) or player:getSkull() >= 3 then
+    timeArea = now + 30000
+   elseif checkPosz == 0 and x:isMonster() and getDistanceBetween(x:getPosition(), player:getPosition()) <= 2 then
+    MonstersCount = MonstersCount + 1
+   end
+  end
+ end
+ if MonstersCount >= 1 and (not timeArea or timeArea < now) then
+  say(storage.AOE)
+ else
+  Combo()
+ end
+end)
 
 onKeyPress(function(keys)
     if storage.ultimate == nil or modules.game_console:isChatEnabled() then return end
