@@ -18,6 +18,9 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Tobirama') then
         setvoctobirama()
       end
+      if text:find('Indra') then
+        setvocindra()
+      end
     end
   end
 end)
@@ -101,4 +104,19 @@ setvoctobirama = function()
   storage.buff = 'Mawashi no Jutsu'
   storage.AOE = 'Dai Suiton Dragon no Jutsu'
   info('Load: Tobirama')
+end
+
+setvocindra = function()
+    storage.magiacombo1 = 'Bodipiasusanda'
+  storage.magiacombo2 = 'Vajra'
+  storage.magiacombo3= 'Shizen no raimei goon'
+  storage.magiacombo4 = 'Indra: amaterasu'
+  storage.magiacombo5 = ''
+  storage.special1 = 'Ninshuu Hono'
+  storage.special2 = 'Kaminari no hassei'
+  storage.special3 = 'Guretofaiaborute'
+  storage.fugaspell = ''
+  storage.buff = 'Indra: susanoo'
+  storage.AOE = 'Mangekyou Amaterasu'
+  info('Load: Indra')
 end
