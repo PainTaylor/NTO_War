@@ -12,15 +12,16 @@ onTalk(function(name, level, mode, text, channelId, pos)
     end
   end
 end)
-
+loadvoc = false
 onTextMessage(function(mode, text)
+  if loadvoc == true then return end
   if text:find('You see yourself') then
     startindex = text:find('are')
     endindex = text:find('VIP')
     if startindex and endindex then
       class = text:sub(startindex+4, endindex-3)
       say('!setvoc ' .. class)
-      info(class)
+      loadvoc = true
     end
   end
 end)
