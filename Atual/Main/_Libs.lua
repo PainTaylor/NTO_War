@@ -1,11 +1,5 @@
 storage.fugaspell = ''
 
-
-
-
-
-
-
 onTalk(function(name, level, mode, text, channelId, pos)
   if name == player:getName() then
     if text:find('!setvoc ') then
@@ -15,6 +9,18 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Chino') then
         setvocchino()
       end
+    end
+  end
+end)
+
+onTextMessage(function(mode, text)
+  if text:find('You see yourself') then
+    startindex = text:find('are')
+    endindex = text:find('VIP')
+    if startindex and endindex then
+      class = text:sub(startindex+4, endindex-3)
+      say('!setvoc ' .. class)
+      info(class)
     end
   end
 end)
