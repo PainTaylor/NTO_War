@@ -100,5 +100,5 @@ setvoctobirama = function()
   storage.fugaspell = ''
   storage.buff = 'Mawashi no Jutsu'
   storage.AOE = 'Dai Suiton Dragon no Jutsu'
-  info('Load: Shisui')
+  info('Load: Tobirama')
 end
