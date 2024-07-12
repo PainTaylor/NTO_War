@@ -43,6 +43,12 @@ macro(1000, 'Buff2', function()
   say(storage.buff2)
 end)
 
+macro(200, 'Haste', function()
+  if not hasHaste() then
+    say('Concentrate Chakra Feet')
+  end
+end)
+
 UI.Label('HP AutoFuga')
 UI.TextEdit(storage.SpecialHP or "60", function(widget, newText)
 storage.SpecialHP = newText
