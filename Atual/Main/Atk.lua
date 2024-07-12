@@ -13,7 +13,7 @@ storage.atkdelay = now
 macro(200, 'combo', function()
   if not g_game.isAttacking() then return end
   if storage.atkdelay < now then
-  	combo()
+  	Combo()
   end
 end)
 
