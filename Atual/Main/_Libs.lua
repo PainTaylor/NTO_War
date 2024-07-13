@@ -21,6 +21,9 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Indra') then
         setvocindra()
       end
+      if text:find('Koji Kashin') then
+        setvockojikashin()
+      end
     end
   end
 end)
@@ -121,7 +124,7 @@ setvocindra = function()
   info('Load: Indra')
 end
 
-setvocindra = function()
+setvockojikashin = function()
   storage.magia200 = 'Sennin-jutsu: Go pinukan no hi ogi'
   storage.magia250 = 'Faiasutairu: Fureimuatakku'
   storage.magia300= 'Shokan: Hono yama no shin no hono'
@@ -133,5 +136,5 @@ setvocindra = function()
   storage.fugaspell = ''
   storage.buff = "Kanzen'naru sen'nin modo"
   storage.AOE = 'Mangekyou Amaterasu'
-  info('Load: Indra')
+  info('Load: Koji')
 end
