@@ -50,6 +50,7 @@ setvocsasuke = function()
   storage.special1 = 'Utsushi wa me no kyosei'
   storage.special2 = 'Susanoo Kagutsuchi'
   storage.special3 = 'Senjutsu no susanoo'
+  storage.special4 = ''
   storage.AOE = 'Fenikkusufurawatekunikku'
   info('Load: Sasuke')
 end
@@ -64,6 +65,7 @@ setvocchino = function()
   storage.special1 = 'Genjutsu: Ketsuryugan'
   storage.special2 = 'Ketsueki kanri'
   storage.special3 = nil
+  storage.special3 = ''
   storage.AOE = 'Shabontama ninjutsu'
   info('Load: Chino')
 end
@@ -77,6 +79,7 @@ setvocmadara = function()
   storage.special1 = 'Madara: Chibaku Tensei'
   storage.special2 = 'Pafekutosusanoo'
   storage.special3 = 'Limbo'
+  storage.special4 = ''
   storage.AOE = 'Gureto fureimu furawa'
   info('Load: Madara')
 end
@@ -90,6 +93,7 @@ setvocshisui = function()
   storage.special1 = 'Tsukuyomi no Jutsu'
   storage.special2 = 'Shokanamatsukami'
   storage.special3 = 'Susanoo Tsukumo'
+  storage.special4 = ''
   storage.AOE = 'Shunka Shuto'
   info('Load: Shisui')
 end
@@ -103,6 +107,7 @@ setvoctobirama = function()
   storage.special1 = 'Gottsunko'
   storage.special2 = 'Kokuangyo no Jutsu'
   storage.special3 = ''
+  storage.special4 = 
   storage.fugaspell = ''
   storage.buff = 'Mawashi no Jutsu'
   storage.AOE = 'Dai Suiton Dragon no Jutsu'
@@ -118,6 +123,7 @@ setvocindra = function()
   storage.special1 = 'Ninshuu Hono'
   storage.special2 = 'Kaminari no hassei'
   storage.special3 = 'Guretofaiaborute'
+  storage.special4 = ''
   storage.fugaspell = ''
   storage.buff = 'Indra: susanoo'
   storage.AOE = 'Mangekyou Amaterasu'
@@ -133,6 +139,7 @@ setvockojikashin = function()
   storage.special1 = 'Cho cho rasen'
   storage.special2 = "Hari Jizo"
   storage.special3 = 'Shokan: Boiragama'
+  storage.special4 = "Kanzen'naru sen'nin modo"
   storage.fugaspell = ''
   storage.buff = "Kanzen'naru sen'nin modo"
   storage.AOE = 'Mangekyou Amaterasu'
