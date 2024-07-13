@@ -2,11 +2,11 @@ setDefaultTab("Atk")
 
 local function Combo()
  if not g_game.isAttacking() then return false end
-  say(storage.magiacombo1)
-  say(storage.magiacombo2)
-  say(storage.magiacombo3)
   say(storage.magiacombo4)
   say(storage.magiacombo5)
+  say(storage.magiacombo3)
+  say(storage.magiacombo2)
+  say(storage.magiacombo1)
 end
 
 storage.atkdelay = now
