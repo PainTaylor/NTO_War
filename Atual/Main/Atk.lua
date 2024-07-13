@@ -32,7 +32,7 @@ macro(1, 'Anti-Red', function()
   local checkPosz = math.abs(x:getPosition().z - player:getPosition().z)
   if checkPosz <= 3 then
    if (x:isPlayer() and x ~= player and x:getEmblem() ~= 1 and x:getShield() < 3) or player:getSkull() >= 3 then
-    timeArea = now + 10000
+    timeArea = now + 0
    elseif checkPosz == 0 and x:isMonster() and getDistanceBetween(x:getPosition(), player:getPosition()) <= 2 then
     MonstersCount = MonstersCount + 1
    end
