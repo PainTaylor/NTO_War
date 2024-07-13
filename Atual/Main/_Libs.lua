@@ -39,11 +39,11 @@ onTextMessage(function(mode, text)
 end)
 
 setvocsasuke = function()
-  storage.magiacombo1 = 'Indoranoya'
-  storage.magiacombo2 = 'Hono-Ikazuchi'
-  storage.magiacombo3= 'Fureimurappufaia'
-  storage.magiacombo4 = 'Kurohomura no maiso'
-  storage.magiacombo5 = ''
+  storage.magia200 = 'Indoranoya'
+  storage.magia250 = 'Hono-Ikazuchi'
+  storage.magia300= 'Fureimurappufaia'
+  storage.magia400 = 'Kurohomura no maiso'
+  storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Utsushi wa me no kyosei'
   storage.special2 = 'Susanoo Kagutsuchi'
   storage.special3 = 'Senjutsu no susanoo'
@@ -53,11 +53,11 @@ end
 
 
 setvocchino = function()
-  storage.magiacombo1 = 'Chi no tatsumaki'
-  storage.magiacombo2 = 'Buraddokuro'
-  storage.magiacombo3= 'Raizu obu za Buraddo doragon'
-  storage.magiacombo4 = 'Genjutsu torappu'
-  storage.magiacombo5 = ''
+  storage.magia200 = 'Chi no tatsumaki'
+  storage.magia250 = 'Buraddokuro'
+  storage.magia300= 'Raizu obu za Buraddo doragon'
+  storage.magia400 = 'Genjutsu torappu'
+  storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Genjutsu: Ketsuryugan'
   storage.special2 = 'Ketsueki kanri'
   storage.special3 = nil
@@ -66,11 +66,11 @@ setvocchino = function()
 end
 
 setvocmadara = function()
-    storage.magiacombo1 = 'Akuma no zo no kusari'
-  storage.magiacombo2 = 'Yasaka Magatama'
-  storage.magiacombo3= 'Madara: kamui'
-  storage.magiacombo4 = 'Ki no ryu'
-  storage.magiacombo5 = ''
+  storage.magia200 = 'Akuma no zo no kusari'
+  storage.magia250 = 'Yasaka Magatama'
+  storage.magia300= 'Madara: kamui'
+  storage.magia400 = 'Ki no ryu'
+  storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Madara: Chibaku Tensei'
   storage.special2 = 'Pafekutosusanoo'
   storage.special3 = 'Limbo'
@@ -79,11 +79,11 @@ setvocmadara = function()
 end
 
 setvocshisui = function()
-    storage.magiacombo1 = 'Susanoo Barrage'
-  storage.magiacombo2 = 'Kotoamatsukami'
-  storage.magiacombo3= 'Magen Kasegui no Jutsu'
-  storage.magiacombo4 = 'Katon Houenka'
-  storage.magiacombo5 = ''
+  storage.magia200 = 'Susanoo Barrage'
+  storage.magia250 = 'Kotoamatsukami'
+  storage.magia300= 'Magen Kasegui no Jutsu'
+  storage.magia400 = 'Katon Houenka'
+  storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Tsukuyomi no Jutsu'
   storage.special2 = 'Shokanamatsukami'
   storage.special3 = 'Susanoo Tsukumo'
@@ -92,11 +92,11 @@ setvocshisui = function()
 end
 
 setvoctobirama = function()
-    storage.magiacombo1 = 'Suiton Suidanha'
-  storage.magiacombo2 = 'Suiton Suishoha'
-  storage.magiacombo3= 'Suiton Teppodama'
-  storage.magiacombo4 = 'Suiton Suikosogyoku no Jutsu'
-  storage.magiacombo5 = ''
+  storage.magia200 = 'Suiton Suidanha'
+  storage.magia250 = 'Suiton Suishoha'
+  storage.magia300= 'Suiton Teppodama'
+  storage.magia400 = 'Suiton Suikosogyoku no Jutsu'
+  storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Gottsunko'
   storage.special2 = 'Kokuangyo no Jutsu'
   storage.special3 = ''
@@ -107,16 +107,31 @@ setvoctobirama = function()
 end
 
 setvocindra = function()
-    storage.magiacombo1 = 'Bodipiasusanda'
-  storage.magiacombo2 = 'Vajra'
-  storage.magiacombo3= 'Shizen no raimei goon'
-  storage.magiacombo4 = 'Indra: amaterasu'
-  storage.magiacombo5 = ''
+  storage.magia200 = 'Bodipiasusanda'
+  storage.magia250 = 'Vajra'
+  storage.magia300= 'Shizen no raimei goon'
+  storage.magia400 = 'Indra: amaterasu'
+  storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Ninshuu Hono'
   storage.special2 = 'Kaminari no hassei'
   storage.special3 = 'Guretofaiaborute'
   storage.fugaspell = ''
   storage.buff = 'Indra: susanoo'
+  storage.AOE = 'Mangekyou Amaterasu'
+  info('Load: Indra')
+end
+
+setvocindra = function()
+  storage.magia200 = 'Sennin-jutsu: Go pinukan no hi ogi'
+  storage.magia250 = 'Faiasutairu: Fureimuatakku'
+  storage.magia300= 'Shokan: Hono yama no shin no hono'
+  storage.magia400 = 'Samadi no shin no hono'
+  storage.magiabijuu = 'Biju Attack'
+  storage.special1 = 'Cho cho rasen'
+  storage.special2 = "Hari Jizo"
+  storage.special3 = 'Shokan: Boiragama'
+  storage.fugaspell = ''
+  storage.buff = "Kanzen'naru sen'nin modo"
   storage.AOE = 'Mangekyou Amaterasu'
   info('Load: Indra')
 end

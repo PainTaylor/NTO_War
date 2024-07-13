@@ -14,7 +14,7 @@ macro(200, 'Chakra Defense', function()
     say('chakra defense')
   end
   if (hppercent() > 90 or manapercent() < 10) and storage.defensekeep < now then
-    say('defense kai')
+    say('kai')
   end
 end)
 
