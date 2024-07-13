@@ -270,33 +270,7 @@ BugLock.icon = addIcon("Bug Map", {item=10384, text="Bug Map", hotkey="Ctrl+Spac
   BugMap.setOn(isOn); 
 end);
 
-BugMap.setOn()
-
-
-storage.timerhaste = now
-macro(20, 'Haste', function()
-  if storage.timerhaste <= now then
-    say('speed up')
-  end
-end)
-
-onTalk(function(name, level, mode, text, channelId, pos)
- if name == player:getName() and channelId == 0 and mode == 44 then
-  if text:find('speed up') then
-    storage.timerhaste = now + 58000
-  end
- end
-end)
-
-macro(100, "anti paralyze", function() 
-  if not isParalyzed() then return end
-    say('Speed Up')
-end)
-
-say('light')
-macro(15000, 'Light', function()
-say('light')
-end)
+BugMap.setOn() 
 
 UI.Label("Mana training")
 if type(storage.manaTrain) ~= "table" then
