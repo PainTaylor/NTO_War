@@ -40,7 +40,7 @@ end)
 
 itemhealmacro = macro(200, 'Item heal', function()
   if hppercent() < tonumber(storage.hppot) then
-    use(tonumber(storage.hpitem))
+    useWith(tonumber(storage.hpitem, player))
   end
 end)
 
