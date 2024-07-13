@@ -48,6 +48,27 @@ macro(200, 'Haste', function()
     say('Concentrate Chakra Feet')
   end
 end)
+storage.defensekeep = now
+macro(200, 'Chakra Defense', function()
+  if not hasmanashield() and hppercent() < 40 then
+    say('chakra defense')
+  end
+  if (hppercent() > 90 or manapercent() < 10) and storage.defensekeep < now then
+    say('defense kai')
+  end
+end)
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if name == player:getName() then
+    if text == 'chakra defense' then
+      storage.defensekeep = now + 3000
+    end
+  end
+end)
+
+
 UI.Separator()
 
 UI.Label('HP AutoFuga')
