@@ -46,7 +46,7 @@ macro(1, 'Anti-Red', function()
 end)
 
 onKeyPress(function(keys)
-  if keys == 'R' or keys == 'F' or keys == 'X' or keys == '1' or then
+  if keys == 'R' or keys == 'F' or keys == 'X' or keys == '1' then
     storage.atkdelay = now + 300
   end
 end)
@@ -75,7 +75,7 @@ end)
 onKeyPress(function(keys)
     if storage.special == nil or modules.game_console:isChatEnabled() then return end
     if keys == '1' then
-        say(storage.special3)
+        say(storage.special4)
     end
 end)
 
