@@ -7,6 +7,27 @@ healmacro = macro(200, 'heal', function()
   end
  end)
 
+
+storage.defensekeep = now
+macro(200, 'Chakra Defense', function()
+  if not hasmanashield() and hppercent() < 40 then
+    say('chakra defense')
+  end
+  if (hppercent() > 90 or manapercent() < 10) and storage.defensekeep < now then
+    say('defense kai')
+  end
+end)
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if name == player:getName() then
+    if text == 'chakra defense' then
+      storage.defensekeep = now + 3000
+    end
+  end
+end)
+
 UI.Label('Item ID')
 UI.TextEdit(storage.hpitem or "3077", function(widget, newText)
 storage.hpitem = newText
@@ -43,30 +64,15 @@ macro(1000, 'Buff2', function()
   say(storage.buff2)
 end)
 UI.Separator()
+
 macro(200, 'Haste', function()
   if not hasHaste() then
     say('Concentrate Chakra Feet')
   end
 end)
-storage.defensekeep = now
-macro(200, 'Chakra Defense', function()
-  if not hasmanashield() and hppercent() < 40 then
-    say('chakra defense')
-  end
-  if (hppercent() > 90 or manapercent() < 10) and storage.defensekeep < now then
-    say('defense kai')
-  end
-end)
 
 
 
-onTalk(function(name, level, mode, text, channelId, pos)
-  if name == player:getName() then
-    if text == 'chakra defense' then
-      storage.defensekeep = now + 3000
-    end
-  end
-end)
 
 
 UI.Separator()
