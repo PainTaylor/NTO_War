@@ -66,7 +66,7 @@ end)
 UI.Separator()
 
 macro(200, 'Haste', function()
-  if storage.hastetime < now then
+  if storage.hastetime < now or storage.hastetime == nil then
     say('Concentrate Chakra Feet')
   end
 end)
