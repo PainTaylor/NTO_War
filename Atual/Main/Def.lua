@@ -64,9 +64,9 @@ macro(1000, 'Buff2', function()
   say(storage.buff2)
 end)
 UI.Separator()
-
+storage.hastetime = now
 macro(200, 'Haste', function()
-  if storage.hastetime < now or storage.hastetime == nil then
+  if storage.hastetime < now then
     say('Concentrate Chakra Feet')
   end
 end)
