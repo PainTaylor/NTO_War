@@ -35,25 +35,28 @@ macro(200, 'ArtefactAdapt', function()
   end
 end)
 
-onContainerOpen(function(container, previousContainer)
-  if not container:getName():find('grey bag') then return end
-  if container:getName():find('grey bag') then
-    ArtefactBpOpen = 'true'
-end
+local m = macro(100, "Jump", "-", function() end)
+ 
+onKeyPress(function(keys)
+  if m.isOff() then return end
+  if keys == "W" then
+    g_game.turn(0) -- north
+    say "jump up"
+    say "jump down"
+  elseif keys == "S" then
+    g_game.turn(2) -- south
+    say "jump up"
+    say "jump down"
+  elseif keys == "A" then
+    g_game.turn(3) -- west
+    say "jump up"
+    say "jump down"
+  elseif keys == "D" then
+    g_game.turn(1) -- east
+    say "jump up"
+    say "jump down"
+   end
 end)
-onContainerClose(function(container)
-if not container:getName():find('grey bag') then return end
-if container:getName():find('grey bag') then
-ArtefactBpOpen = 'false'
-end
-end)
-
-macro(1000, 'AbrirBp', function()
-if  ArtefactBpOpen == 'false' or ArtefactBpOpen == nil then
-g_game.open(findItem(654))
-end
-end)
-
 
 UI.Separator()
 

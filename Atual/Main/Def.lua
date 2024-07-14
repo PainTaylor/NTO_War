@@ -40,7 +40,7 @@ end)
 
 itemhealmacro = macro(200, 'Item heal', function()
   if hppercent() < tonumber(storage.hppot) then
-    useWith(tonumber(storage.hpitem, player))
+    useWith(tonumber(storage.hpitem, player:getPosition()))
   end
 end)
 
@@ -66,12 +66,18 @@ end)
 UI.Separator()
 
 macro(200, 'Haste', function()
-  if not hasHaste() then
+  if storage.hastetime < now then
     say('Concentrate Chakra Feet')
   end
 end)
 
-
+onTalk(function(name, level, mode, text, channelId, pos)
+  if name == player:getName() then
+    if text == 'Concentrate Chakra Feet' then
+      storage.hastetime = now + 60000
+    end
+  end
+end)
 
 
 
