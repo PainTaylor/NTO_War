@@ -132,10 +132,6 @@ Target = {
  end
  }
  
-hotkey(Target.KeyCancel, function()
- Target.cancel()
-end)
- 
 macro(100, 'Target', function()
  if Target.cancelTime >= now then return end
  if g_game.isAttacking() then

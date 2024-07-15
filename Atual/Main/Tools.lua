@@ -1,7 +1,7 @@
 setDefaultTab("Tools")
-
+Jumpss = macro(200, 'Jumps', function()end)
 onKeyPress(function(keys)
-  if m.isOff() then return end
+  if Jumpss.isOff() then return end
   if keys == "W" then
     g_game.turn(0) -- north
     say "jump up"
