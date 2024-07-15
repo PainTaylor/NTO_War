@@ -1,59 +1,25 @@
 setDefaultTab("Tools")
 
-storage.holditem = now
-onPlayerHealthChange(function(healthPercent)
-  if healthPercent < 15 then
-    storage.holditem  = now + 3000
-  end
+onKeyPress(function(keys)
+  if m.isOff() then return end
+  if keys == "W" then
+    g_game.turn(0) -- north
+    say "jump up"
+    say "jump down"
+  elseif keys == "S" then
+    g_game.turn(2) -- south
+    say "jump up"
+    say "jump down"
+  elseif keys == "A" then
+    g_game.turn(3) -- west
+    say "jump up"
+    say "jump down"
+  elseif keys == "D" then
+    g_game.turn(1) -- east
+    say "jump up"
+    say "jump down"
+   end
 end)
-
-  speedartefact = findItem(13788)
-  reviveartefact = findItem(13815)
-  Damageartefact = findItem(13779)
-  LootArtefact = findItem(13694)
-  PoisonArtefact = findItem(13727)
-
-macro(200, 'RemovePoison', function()
-    if isPoisioned() then
-    moveToSlot(13727, 2)
-  end
-end)
-
-macro(200, 'ArtefactAdapt', function()
-  if storage.holditem > now then
-    moveToSlot(13815, 2)
-  elseif g_game.isAttacking() then
-      x = g_game.getAttackingCreature()
-     if x:getHealthPercent() <= 10 and x:isMonster() then
-      moveToSlot(13694, 2)
-      delay(1000)
-  else
-    moveToSlot(13779, 2)
-  end
-  else
-    moveToSlot(13788, 2)
-  end
-end)
-
-onContainerOpen(function(container, previousContainer)
-  if not container:getName():find('grey bag') then return end
-  if container:getName():find('grey bag') then
-    ArtefactBpOpen = 'true'
-end
-end)
-onContainerClose(function(container)
-if not container:getName():find('grey bag') then return end
-if container:getName():find('grey bag') then
-ArtefactBpOpen = 'false'
-end
-end)
-
-macro(1000, 'AbrirBp', function()
-if  ArtefactBpOpen == 'false' or ArtefactBpOpen == nil then
-g_game.open(findItem(654))
-end
-end)
-
 
 UI.Separator()
 

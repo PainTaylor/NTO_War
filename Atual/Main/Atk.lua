@@ -104,6 +104,50 @@ end)
 
 UI.Label("Enemys")
 
+
+-- Target
+local creatureId = nil;
+local stopAttackRequested = false;
+ 
+keepTarget = {
+  setTarget = function(_creatureId)
+    creatureId = _creatureId;
+  end,
+ 
+  stopAttack = function()
+    stopAttackRequested = true;
+  end
+};
+ 
+ 
+ 
+Target = {
+ KeyCancel = 'Escape',
+ cancelTime = 0,
+ cancel = function()
+  Target.Id = nil
+  Target.get = nil
+  Target.cancelTime = now + 100
+  g_game.cancelAttack()
+ end
+ }
+ 
+hotkey(Target.KeyCancel, function()
+ Target.cancel()
+end)
+ 
+macro(100, 'Target', function()
+ if Target.cancelTime >= now then return end
+ if g_game.isAttacking() then
+  Target.Id = g_game.getAttackingCreature():getId()
+ elseif Target.Id then
+  Target.get = getCreatureById(Target.Id)
+  if Target.get then
+   g_game.attack(Target.get)
+  end
+ end
+end)
+
 macro(1, "Chicletinho 90%", function()
 
 for _,pla in ipairs(getSpectators(posz())) do
