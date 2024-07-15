@@ -48,36 +48,31 @@ end)
 UI.Separator()
 
 UI.Label('Buff')
-UI.TextEdit(storage.buff or "Buff", function(widget, newText)
-storage.buff = newText
-end)
-
-macro(1000, 'Buff1', function()
+macro(200, 'buff', function()
+  if hasPartyBuff() then return end
   say(storage.buff)
 end)
 
-UI.Label('Buff2')
-UI.TextEdit(storage.buff2 or "Buff", function(widget, newText)
-storage.buff2 = newText
-end)
-
 macro(1000, 'Buff2', function()
-  say(storage.buff2)
-end)
-UI.Separator()
-storage.hastetime = now
-macro(200, 'Haste', function()
-  if storage.hastetime < now then
-    say('Concentrate Chakra Feet')
+  if storage.tbuff2 <= now then
+    say(storage.buff2)
   end
 end)
 
+storage.tbuff2 = now
 onTalk(function(name, level, mode, text, channelId, pos)
-  if name == player:getName() then
-    if text == 'Concentrate Chakra Feet' then
-      storage.hastetime = now + 60000
-    end
-  end
+if name ~= player:getName() then return end
+if text:lower() == storage.buff2 and storage.tbuff2 < now then
+  storage.tbuff2 = now + 60000
+end
+end)
+
+UI.Separator()
+
+
+macro(200, 'Haste', function()
+  if hasHaste() then return end
+    say('Concentrate Chakra Feet')
 end)
 
 
