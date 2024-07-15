@@ -24,6 +24,9 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Koji Kashin') then
         setvockojikashin()
       end
+      if text:find('Maito') then
+        setvocmaito()
+      end
     end
   end
 end)
@@ -144,4 +147,21 @@ setvockojikashin = function()
   storage.buff = "Kanzen'naru sen'nin modo"
   storage.AOE = 'Mangekyou Amaterasu'
   info('Load: Koji')
+end
+
+setvocmaito = function()
+  storage.magia200 = 'Sekizo'
+  storage.magia250 = 'Hirudora'
+  storage.magia300= 'Asa Kujaku'
+  storage.magia400 = 'Yagai'
+  storage.magiabijuu = 'Biju Attack'
+  storage.special1 = 'Dai Yagai'
+  storage.special2 = "Open Gates Of Death"
+  storage.special3 = nil
+  storage.special4 = nil
+  storage.fugaspell = nil
+  storage.buff = "Open Gates Of Life"
+  storage.buff2 = "Open Gates Of Death"
+  storage.AOE = 'Konoha Reppu'
+  info('Load: Maito')
 end
