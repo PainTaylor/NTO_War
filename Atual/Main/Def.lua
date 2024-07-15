@@ -54,7 +54,7 @@ macro(200, 'buff', function()
 end)
 
 macro(1000, 'Buff2', function()
-  if storage.tbuff2 <= now then
+  if hasPartyBuff() then
     say(storage.buff2)
   end
 end)
