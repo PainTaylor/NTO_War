@@ -103,8 +103,8 @@ setvocshisui = function()
   storage.special2 = 'Shokanamatsukami'
   storage.special3 = 'Susanoo Tsukumo'
   storage.special4 = nil
-  storage.buff = 'Madara Susanoo'
-  storage.buff2 = 'Pafekutosusanoo'  
+  storage.buff = 'Sharingan Kotetsu'
+  storage.buff2 = nil  
   storage.AOE = 'Shunka Shuto'
   info('Load: Shisui')
 end
