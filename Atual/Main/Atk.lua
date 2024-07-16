@@ -53,7 +53,7 @@ macro(1, 'Anti-Red', function()
  end
 end)
 
-onKeyPress(function(keys)
+onKeyDown(function(keys)
   if keys == 'R' or keys == 'F' or keys == 'X' or keys == '1' then
     storage.atkdelay = now + 200
   end
