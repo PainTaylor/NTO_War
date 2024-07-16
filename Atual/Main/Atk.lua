@@ -17,6 +17,14 @@ macro(200, 'combo', function()
   end
 end)
 
+macro(200, 'comboSpecial', function()
+  if not g_game.isAttacking() then return end
+  if  then
+    say(storage.special1)
+    Combo()
+  end
+end)
+
 macro(200, 'Area', function()
   if storage.atkdelay < now then
     say(storage.AOE)
@@ -47,7 +55,7 @@ end)
 
 onKeyPress(function(keys)
   if keys == 'R' or keys == 'F' or keys == 'X' or keys == '1' then
-    storage.atkdelay = now + 300
+    storage.atkdelay = now + 200
   end
 end)
 
