@@ -19,10 +19,8 @@ end)
 
 macro(200, 'comboSpecial', function()
   if not g_game.isAttacking() then return end
-  if  then
     say(storage.special1)
     Combo()
-  end
 end)
 
 macro(200, 'Area', function()
