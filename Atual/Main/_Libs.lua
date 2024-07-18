@@ -253,6 +253,6 @@ setvocorochimaru = function()
   storage.fugaspell = 'Daijamaru-ryu migawari-jutsu'
   storage.buff = "Noroi shirushi"
   storage.buff2 = "Orochi no noroi"
-  storage.AOE = 'YMandara no Jin'
+  storage.AOE = 'Mandara no Jin'
   info('Load: Orochimaru')
 end
