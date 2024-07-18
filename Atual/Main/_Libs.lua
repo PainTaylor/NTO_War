@@ -207,19 +207,19 @@ setvockaguya = function()
 end
 
 setvocitachi = function()
-  storage.magia200 = 'Togebari'
-  storage.magia250 = 'Bocho Gudodama'
-  storage.magia300= 'Konnichisama'
-  storage.magia400 = 'Yomotsu Hirasaka'
+  storage.magia200 = 'Amaterasuu'
+  storage.magia250 = 'Iatsu Sharingan'
+  storage.magia300= 'Katon Fenix Gouenkyuu'
+  storage.magia400 = 'Susanoo Noshuku'
   storage.magiabijuu = 'Biju Attack'
-  storage.special1 = 'Amenominaka'
-  storage.special2 = "Yomotsu Hirasaka"
-  storage.special3 = 'Kankaku-teki tekunikku'
-  storage.special4 = nil
-  storage.fugaspell = nil
-  storage.buff = "Rinne Sharingan"
+  storage.special1 = 'Tsukuyomi no Jutsu'
+  storage.special2 = "Karasuamatsukami"
+  storage.special3 = 'Izanami'
+  storage.special4 = 'Karasu Bunshin'
+  storage.fugaspell = 'Karasuamatsukami'
+  storage.buff = "Fuumetsu Susanoo"
   storage.buff2 = "Kankaku-teki tekunikku"
-  storage.AOE = 'Yachihoko no Kami'
+  storage.AOE = 'Mangekyou Amaterasu'
   info('Load: Itachi')
 end
 
