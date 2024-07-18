@@ -30,6 +30,9 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Kaguya Otsutsuki') then
         setvockaguya()
       end
+      if text:find('Itachi') then
+        setvocitachi()
+      end
     end
   end
 end)
@@ -196,3 +199,22 @@ setvockaguya = function()
   storage.AOE = 'Yachihoko no Kami'
   info('Load: Kaguya')
 end
+
+setvocitachi = function()
+  storage.magia200 = 'Togebari'
+  storage.magia250 = 'Bocho Gudodama'
+  storage.magia300= 'Konnichisama'
+  storage.magia400 = 'Yomotsu Hirasaka'
+  storage.magiabijuu = 'Biju Attack'
+  storage.special1 = 'Amenominaka'
+  storage.special2 = "Yomotsu Hirasaka"
+  storage.special3 = 'Kankaku-teki tekunikku'
+  storage.special4 = nil
+  storage.fugaspell = nil
+  storage.buff = "Rinne Sharingan"
+  storage.buff2 = "Kankaku-teki tekunikku"
+  storage.AOE = 'Yachihoko no Kami'
+  info('Load: Itachi')
+end
+
+
