@@ -194,5 +194,5 @@ setvockaguya = function()
   storage.buff = "Rinne Sharingan"
   storage.buff2 = "Kankaku-teki tekunikku"
   storage.AOE = 'Yachihoko no Kami'
-  info('Load: Maito')
+  info('Load: Kaguya')
 end
