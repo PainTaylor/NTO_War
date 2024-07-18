@@ -33,6 +33,12 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Itachi') then
         setvocitachi()
       end
+      if text:find('Momoshiki') then
+        setvocmomoshiki()
+      end
+      if text:find('Orochimaru') then
+        setvocorochimaru()
+      end
     end
   end
 end)
@@ -217,4 +223,36 @@ setvocitachi = function()
   info('Load: Itachi')
 end
 
+setvocmomoshiki = function()
+  storage.magia200 = 'Shinku no hono'
+  storage.magia250 = 'Karuma: Seigyo funo'
+  storage.magia300= 'Otsutsuki jiku ninjutsu'
+  storage.magia400 = 'Biji yuubakudan'
+  storage.magiabijuu = 'Biju Attack'
+  storage.special1 = 'Guren no rasen'
+  storage.special2 = "Kankaku"
+  storage.special3 = 'Saishu keitai otsutsuki'
+  storage.special4 = nil
+  storage.fugaspell = 'Kankaku'
+  storage.buff = "Kinniku kakucho"
+  storage.buff2 = "Saishu keitai otsutsuki"
+  storage.AOE = 'Yakusa-no-Ikazuchi'
+  info('Load: Momoshiki')
+end
 
+setvocorochimaru = function()
+  storage.magia200 = 'Sunekuatakku'
+  storage.magia250 = 'Hebi ni kamareta'
+  storage.magia300= 'Sodosuneku'
+  storage.magia400 = 'Kusanagi notsurugi'
+  storage.magiabijuu = 'Biju Attack'
+  storage.special1 = 'Orochi no noroi'
+  storage.special2 = "Yomotsu Hirasaka"
+  storage.special3 = 'Edo Tensei Tobirama'
+  storage.special4 = nil
+  storage.fugaspell = 'Daijamaru-ryu migawari-jutsu'
+  storage.buff = "Noroi shirushi"
+  storage.buff2 = "Orochi no noroi"
+  storage.AOE = 'YMandara no Jin'
+  info('Load: Orochimaru')
+end
