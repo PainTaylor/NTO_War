@@ -27,6 +27,9 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Maito') then
         setvocmaito()
       end
+      if text:find('Kaguya Otsutsuki') then
+        setvockaguya()
+      end
     end
   end
 end)
@@ -174,5 +177,22 @@ setvocmaito = function()
   storage.buff = "Open Gates Of Life"
   storage.buff2 = "Open Gates Of Death"
   storage.AOE = 'Konoha Reppu'
+  info('Load: Maito')
+end
+
+setvockaguya = function()
+  storage.magia200 = 'Togebari'
+  storage.magia250 = 'Bocho Gudodama'
+  storage.magia300= 'Konnichisama'
+  storage.magia400 = 'Yomotsu Hirasaka'
+  storage.magiabijuu = 'Biju Attack'
+  storage.special1 = 'Amenominaka'
+  storage.special2 = "Yomotsu Hirasaka"
+  storage.special3 = 'Kankaku-teki tekunikku'
+  storage.special4 = nil
+  storage.fugaspell = nil
+  storage.buff = "Rinne Sharingan"
+  storage.buff2 = "Kankaku-teki tekunikku"
+  storage.AOE = 'Yachihoko no Kami'
   info('Load: Maito')
 end

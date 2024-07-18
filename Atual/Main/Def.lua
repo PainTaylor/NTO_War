@@ -7,16 +7,25 @@ healmacro = macro(200, 'heal', function()
   end
  end)
 
+storage.exaustheal = now
+storage.Bigheal = 'otsutsuki regeneration'
+healmacro = macro(200, 'Bigger Heal', function()
+  if hppercent() < 99 and storage.exaustheal < now then
+    say(storage.Bigheal)
+  end
+ end)
+
 
 storage.defensekeep = now
 macro(200, 'Chakra Defense', function()
-  if not hasmanashield() and hppercent() < 40 then
+  if not hasmanashield() and hppercent() < 50 then
     say('chakra defense')
   end
-  if (hppercent() > 90 or manapercent() < 10) and storage.defensekeep < now then
-    say('kai')
-  end
 end)
+
+--  if (hppercent() > 90 or manapercent() < 10) and storage.defensekeep < now then
+--    say('kai')
+--  end
 
 
 
