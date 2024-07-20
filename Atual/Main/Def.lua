@@ -18,7 +18,7 @@ healmacro = macro(200, 'Bigger Heal', function()
 
 storage.defensekeep = now
 macro(200, 'Chakra Defense', function()
-  if not hasmanashield() and hppercent() < 50 then
+  if not hasManaShield() and hppercent() < 50 then
     say('chakra defense')
   end
 end)

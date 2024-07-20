@@ -471,3 +471,38 @@ onKeyDown(function(keys)
 info(targetsense)
     end
 end)
+
+Kunaiposition = {};
+
+
+local availableKeys = {
+  ['W'] = { 0, -9 },
+  ['S'] = { 0, 9 },
+  ['A'] = { -9, 0 },
+  ['D'] = { 9, 0 },
+  ['C'] = { 5, 5 },
+  ['Z'] = { -5, 5 },
+  ['Q'] = { -5, -5 },
+  ['E'] = { 5, -5 }
+};
+
+Kunai = macro(1, "AutoKunai", function()
+if modules.game_walking.wsadWalking then
+  Kunaiposition.logic();
+end
+end)
+
+function Kunaiposition.logic()
+  local playerPos = pos();
+  local tile;
+  for key, value in pairs(availableKeys) do
+    if (modules.corelib.g_keyboard.isKeyPressed(key)) then
+      playerPos.x = playerPos.x + value[1];
+      playerPos.y = playerPos.y + value[2];
+      tile = g_map.getTile(playerPos);
+      break;
+    end
+  end
+  if (not tile) then return end;
+  useWith(7382, tile:getTopUseThing());
+end
