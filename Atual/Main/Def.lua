@@ -72,7 +72,7 @@ storage.tbuff2 = now
 onTalk(function(name, level, mode, text, channelId, pos)
 if name ~= player:getName() then return end
 if text == storage.buff2 and storage.tbuff2 < now then
-  storage.tbuff2 = now + 60000
+  storage.tbuff2 = now + 40000
 end
 end)
 
