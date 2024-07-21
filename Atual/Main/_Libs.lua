@@ -39,6 +39,9 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Orochimaru') then
         setvocorochimaru()
       end
+      if text:find('Sandaime Raikage') then
+        setvocsraikage()
+      end
     end
   end
 end)
@@ -256,3 +259,23 @@ setvocorochimaru = function()
   storage.AOE = 'Mandara no Jin'
   info('Load: Orochimaru')
 end
+
+setvocsraikage = function()
+  storage.magia200 = 'Kuroi inazuma'
+  storage.magia250 = 'Raigaponpu'
+  storage.magia300= 'Jigoku no sashi kizu'
+  storage.magia400 = 'Ritoruburakkuraitoningu'
+  storage.magiabijuu = 'Biju Attack'
+  storage.special1 = 'Najji'
+  storage.special2 = "Keimusho no mon no tenohira soko"
+  storage.special3 = 'Massuguna inazuma'
+  storage.special4 = nil
+  storage.magiastack = 'Keimusho no mon no tenohira soko'
+  storage.fugaspell = 'Daijamaru-ryu migawari-jutsu'
+  storage.buff = "Raitoningusutairuchakuramodo"
+  storage.buff2 = "Massuguna inazuma"
+  storage.AOE = 'Boryoku-tekina inazuma yoko'
+  info('Load: S. Raikage')
+end
+
+

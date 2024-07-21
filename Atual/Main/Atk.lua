@@ -23,6 +23,14 @@ macro(200, 'comboSpecial', function()
     Combo()
 end)
 
+macro(200, 'ComboStack', function()
+  if not g_game.isAttacking() then return end
+  if storage.magiastack then
+    say(storage.magiastack)
+  end
+    Combo()
+end)
+
 macro(200, 'Area', function()
   if storage.atkdelay < now then
     say(storage.AOE)
