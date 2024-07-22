@@ -45,7 +45,7 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Code') then
         setvocCode()
       end
-      if text:find('Tobi') then
+      if text == 'Tobi' then
         setvocTobi()
       end
       if text:find('Sarada') then
