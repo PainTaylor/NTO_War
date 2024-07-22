@@ -51,6 +51,9 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Sarada') then
         setvocSarada()
       end
+      if text:find('Tsunade') then
+        setvocTsunade()
+      end
     end
   end
 end)
@@ -342,9 +345,25 @@ setvocSarada = function()
   info('Load: Sarada')
 end
 
-
-
-
+setvocTsunade = function()
+  storage.magia200 = 'Ten no itami no ashi'
+  storage.magia250 = 'Yuka no hibiware'
+  storage.magia300 = 'Adamantainfisuto'
+  storage.magia400 = 'Sukaisupiakikku'
+  storage.magiabijuu = 'Biju Attack'
+  storage.special1 = 'Densetsu no Henrin'
+  storage.special2 = 'Hyaku-gun no insho'
+  storage.special3 = 'In no fuin: Kaijo'
+  storage.special4 = 'Kuchiyose Katsuyu'
+  storage.magiastack = nil
+  storage.fugaspell = ''
+  storage.SHEAL = 'Hyaku-gun no insho'
+  storage.SHEAL1 = 'Shousen no Jutsu'
+  storage.buff = 'Sozo no saisei'
+  storage.buff2 = 'In no fuin: Kaijo'
+  storage.AOE = 'Kentoshiki shogai'
+  info('Load: Tsunade')
+end
 
 
 g_game.look(player)
@@ -353,7 +372,7 @@ g_game.look(player)
 --------------Comandos de Controle Remoto--------------
 
 onTalk(function(name, level, mode, text, channelId, pos)
-  if player:getShield() == 2 then
+  if channelId ~= 1 then return end
     if text == 'CarregarHunt' then
       configList:setCurrentOption(player:getName())
     end
@@ -376,10 +395,10 @@ onTalk(function(name, level, mode, text, channelId, pos)
     if text == 'Siga' then
       followmacro.setOn()
     end
-  end
 end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
+  if channelId ~= 1 then return end
   if text:find('.siga ') then
     startindex = text:find('siga')
     endindex = text:find('!')
