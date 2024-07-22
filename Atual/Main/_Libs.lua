@@ -401,7 +401,6 @@ onTalk(function(name, level, mode, text, channelId, pos)
 end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
-  if channelId ~= 1 then return end
   if text:find('.siga ') then
     startindex = text:find('siga')
     endindex = text:find('!')
