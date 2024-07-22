@@ -348,3 +348,43 @@ end
 
 
 g_game.look(player)
+
+
+--------------Comandos de Controle Remoto--------------
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if player:getShield() == 2 then
+    if text == 'CarregarHunt' then
+      configList:setCurrentOption(player:getName())
+    end
+    if text == 'CarregarTreino' then
+      configList:setCurrentOption('Treino')
+    end
+    if text == 'ligar target' then
+      TargetBot.setOn()
+    end
+    if text == 'desligar target' then
+      TargetBot.setOff()
+      Target.Id = nil
+      Target.get = nil
+      g_game.cancelAttack()
+    end
+    if text == 'pare de seguir' then
+      followmacro.setOff()
+      g_game.cancelFollow()
+    end
+    if text == 'Siga' then
+      followmacro.setOn()
+    end
+  end
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if text:find('.siga ') then
+    startindex = text:find('siga')
+    endindex = text:find('!')
+    storage.follow = nil
+    storage.follow2 = nil
+    storage.follow3 = text:sub(startindex+5,endindex-1)
+  end
+end)

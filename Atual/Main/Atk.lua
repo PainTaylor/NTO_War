@@ -191,7 +191,7 @@ end
 
 
 
-macro(1, 'Chiclete Ryan', function()
+chicletao = macro(1, 'Chiclete Ryan', function()
   local possibleTarget = false
   for _, creature in ipairs(getSpectators(posz())) do
     local specHP = creature:getHealthPercent()
