@@ -45,7 +45,7 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Code') then
         setvocCode()
       end
-      if text == 'Tobi' then
+      if text:find('Tobi1') then
         setvocTobi()
       end
       if text:find('Sarada') then
@@ -406,4 +406,17 @@ onTalk(function(name, level, mode, text, channelId, pos)
     storage.follow2 = nil
     storage.follow3 = text:sub(startindex+5,endindex-1)
   end
+end)
+
+macro(1, function()
+if player:getShield() > 0 then return end
+for _,PT in ipairs(getSpectators(posz())) do
+if PT:getEmblem() == 1 and PT:getShield() > 0 then 
+ return g_game.partyJoin(PT:getId())
+end
+
+end
+
+delay(100)
+
 end)
