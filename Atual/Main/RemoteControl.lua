@@ -40,12 +40,12 @@ onTalk(function(name, level, mode, text, channelId, pos)
 end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
-  if text:find('.siga ') then
+  if text:find('!seguir ') then
     startindex = text:find('siga')
-    endindex = text:find('!')
+    endindex = text:find('.')
     storage.follow = nil
     storage.follow2 = nil
-    storage.follow3 = text:sub(startindex+5,endindex-1)
+    storage.follow3 = text:sub(startindex+7,endindex-1)
   end
 end)
 
