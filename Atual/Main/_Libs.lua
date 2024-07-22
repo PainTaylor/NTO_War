@@ -420,3 +420,37 @@ end
 delay(100)
 
 end)
+
+searchForGuild = function()
+    g_game.requestChannels()
+    schedule(1000, function()
+        local channelsWindow = modules.game_console.channelsWindow
+        if channelsWindow then
+            local channelListPanel = channelsWindow:getChildById('channelList')
+            for index, value in ipairs(channelListPanel:getChildren()) do
+                if value.channelId == 0 then
+                    guild = value:getText():trim()
+          say(guild)
+                    channelsWindow:destroy()
+                    return true
+                end
+            end
+            channelsWindow:destroy()
+        end
+        return schedule(3000, searchForGuild)
+    end)
+end
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if text == 'OGC' then
+  if not guild then
+    if not requestedGuild then
+      requestedGuild = true
+      searchForGuild()
+    end
+    return
+  end
+end
+  if getChannelId(guild) then return end
+    return g_game.joinChannel(0) and delay(500)
+end)
