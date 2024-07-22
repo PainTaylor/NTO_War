@@ -395,6 +395,9 @@ onTalk(function(name, level, mode, text, channelId, pos)
     if text == 'Siga' then
       followmacro.setOn()
     end
+    if text == 'desbugar Follow' then
+      g_game.cancelFollow()
+    end
 end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
