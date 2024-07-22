@@ -4,43 +4,52 @@ onTalk(function(name, level, mode, text, channelId, pos)
   if name == player:getName() then
     if text:find('!setvoc ') then
       if text:find('Sasuke') then
-        setvocsasuke()
+        setvocSasuke()
       end
       if text:find('Chino') then
-        setvocchino()
+        setvocChino()
       end
       if text:find('Madara') then
-        setvocmadara()
+        setvocMadara()
       end
       if text:find('Shisui') then
-        setvocshisui()
+        setvocShisui()
       end
       if text:find('Tobirama') then
-        setvoctobirama()
+        setvocTobirama()
       end
       if text:find('Indra') then
-        setvocindra()
+        setvocIndra()
       end
       if text:find('Koji Kashin') then
-        setvockojikashin()
+        setvocKojikashin()
       end
       if text:find('Maito') then
-        setvocmaito()
+        setvocMaito()
       end
       if text:find('Kaguya Otsutsuki') then
-        setvockaguya()
+        setvocKaguya()
       end
       if text:find('Itachi') then
-        setvocitachi()
+        setvocItachi()
       end
       if text:find('Momoshiki') then
-        setvocmomoshiki()
+        setvocMomoshiki()
       end
       if text:find('Orochimaru') then
-        setvocorochimaru()
+        setvocOrochimaru()
       end
       if text:find('Sandaime Raikage') then
-        setvocsraikage()
+        setvocSRaikage()
+      end
+      if text:find('Code') then
+        setvocCode()
+      end
+      if text:find('Tobi') then
+        setvocTobi()
+      end
+      if text:find('Sarada') then
+        setvocSarada()
       end
     end
   end
@@ -59,10 +68,10 @@ onTextMessage(function(mode, text)
   end
 end)
 --Ordem Keys S1=R S2 = F S3 = X S4 = 1
-setvocsasuke = function()
+setvocSasuke = function()
   storage.magia200 = 'Indoranoya'
   storage.magia250 = 'Hono-Ikazuchi'
-  storage.magia300= 'Fureimurappufaia'
+  storage.magia300 = 'Fureimurappufaia'
   storage.magia400 = 'Kurohomura no maiso'
   storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Utsushi wa me no kyosei'
@@ -76,10 +85,10 @@ setvocsasuke = function()
 end
 
 
-setvocchino = function()
+setvocChino = function()
   storage.magia200 = 'Chi no tatsumaki'
   storage.magia250 = 'Buraddokuro'
-  storage.magia300= 'Raizu obu za Buraddo doragon'
+  storage.magia300 = 'Raizu obu za Buraddo doragon'
   storage.magia400 = 'Genjutsu torappu'
   storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Genjutsu: Ketsuryugan'
@@ -92,10 +101,10 @@ setvocchino = function()
   info('Load: Chino')
 end
 
-setvocmadara = function()
+setvocMadara = function()
   storage.magia200 = 'Akuma no zo no kusari'
   storage.magia250 = 'Yasaka Magatama'
-  storage.magia300= 'Madara: kamui'
+  storage.magia300 = 'Madara: kamui'
   storage.magia400 = 'Ki no ryu'
   storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Madara: Chibaku Tensei'
@@ -108,10 +117,10 @@ setvocmadara = function()
   info('Load: Madara')
 end
 
-setvocshisui = function()
+setvocShisui = function()
   storage.magia200 = 'Susanoo Barrage'
   storage.magia250 = 'Kotoamatsukami'
-  storage.magia300= 'Magen Kasegui no Jutsu'
+  storage.magia300 = 'Magen Kasegui no Jutsu'
   storage.magia400 = 'Katon Houenka'
   storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Tsukuyomi no Jutsu'
@@ -124,10 +133,10 @@ setvocshisui = function()
   info('Load: Shisui')
 end
 
-setvoctobirama = function()
+setvocTobirama = function()
   storage.magia200 = 'Suiton Suidanha'
   storage.magia250 = 'Suiton Suishoha'
-  storage.magia300= 'Suiton Teppodama'
+  storage.magia300 = 'Suiton Teppodama'
   storage.magia400 = 'Suiton Suikosogyoku no Jutsu'
   storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Gottsunko'
@@ -141,10 +150,10 @@ setvoctobirama = function()
   info('Load: Tobirama')
 end
 
-setvocindra = function()
+setvocIndra = function()
   storage.magia200 = 'Bodipiasusanda'
   storage.magia250 = 'Vajra'
-  storage.magia300= 'Shizen no raimei goon'
+  storage.magia300 = 'Shizen no raimei goon'
   storage.magia400 = 'Indra: amaterasu'
   storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Guretofaiaborute'
@@ -158,10 +167,10 @@ setvocindra = function()
   info('Load: Indra')
 end
 
-setvockojikashin = function()
+setvocKojikashin = function()
   storage.magia200 = 'Sennin-jutsu: Go pinukan no hi ogi'
   storage.magia250 = 'Faiasutairu: Fureimuatakku'
-  storage.magia300= 'Shokan: Hono yama no shin no hono'
+  storage.magia300 = 'Shokan: Hono yama no shin no hono'
   storage.magia400 = 'Samadi no shin no hono'
   storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Cho cho rasen'
@@ -175,10 +184,10 @@ setvockojikashin = function()
   info('Load: Koji')
 end
 
-setvocmaito = function()
+setvocMaito = function()
   storage.magia200 = 'Sekizo'
   storage.magia250 = 'Hirudora'
-  storage.magia300= 'Asa Kujaku'
+  storage.magia300 = 'Asa Kujaku'
   storage.magia400 = 'Yagai'
   storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Dai Yagai'
@@ -192,10 +201,10 @@ setvocmaito = function()
   info('Load: Maito')
 end
 
-setvockaguya = function()
+setvocKaguya = function()
   storage.magia200 = 'Togebari'
   storage.magia250 = 'Bocho Gudodama'
-  storage.magia300= 'Konnichisama'
+  storage.magia300 = 'Konnichisama'
   storage.magia400 = 'Yomotsu Hirasaka'
   storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Amenominaka'
@@ -209,10 +218,10 @@ setvockaguya = function()
   info('Load: Kaguya')
 end
 
-setvocitachi = function()
+setvocItachi = function()
   storage.magia200 = 'Amaterasuu'
   storage.magia250 = 'Iatsu Sharingan'
-  storage.magia300= 'Katon Fenix Gouenkyuu'
+  storage.magia300 = 'Katon Fenix Gouenkyuu'
   storage.magia400 = 'Susanoo Noshuku'
   storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Tsukuyomi no Jutsu'
@@ -226,10 +235,10 @@ setvocitachi = function()
   info('Load: Itachi')
 end
 
-setvocmomoshiki = function()
+setvocMomoshiki = function()
   storage.magia200 = 'Shinku no hono'
   storage.magia250 = 'Karuma: Seigyo funo'
-  storage.magia300= 'Otsutsuki jiku ninjutsu'
+  storage.magia300 = 'Otsutsuki jiku ninjutsu'
   storage.magia400 = 'Biji yuubakudan'
   storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Guren no rasen'
@@ -243,10 +252,10 @@ setvocmomoshiki = function()
   info('Load: Momoshiki')
 end
 
-setvocorochimaru = function()
+setvocOrochimaru = function()
   storage.magia200 = 'Sunekuatakku'
   storage.magia250 = 'Hebi ni kamareta'
-  storage.magia300= 'Sodosuneku'
+  storage.magia300 = 'Sodosuneku'
   storage.magia400 = 'Kusanagi notsurugi'
   storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Orochi no noroi'
@@ -260,10 +269,10 @@ setvocorochimaru = function()
   info('Load: Orochimaru')
 end
 
-setvocsraikage = function()
+setvocSRaikage = function()
   storage.magia200 = 'Kuroi inazuma'
   storage.magia250 = 'Raigaponpu'
-  storage.magia300= 'Jigoku no sashi kizu'
+  storage.magia300 = 'Jigoku no sashi kizu'
   storage.magia400 = 'Ritoruburakkuraitoningu'
   storage.magiabijuu = 'Biju Attack'
   storage.special1 = 'Najji'
@@ -278,4 +287,57 @@ setvocsraikage = function()
   info('Load: S. Raikage')
 end
 
+setvocCode = function()
+  storage.magia200 = 'Karumahowaitoburedo'
+  storage.magia250 = 'Karumahowaitosufia'
+  storage.magia300 = 'Karumahowaitoshokku'
+  storage.magia400 = 'Karumahowaitoerekutorikkusufia'
+  storage.magiabijuu = 'Biju Attack'
+  storage.special1 = 'Tsumeato'
+  storage.special2 = "Shisutemukodingu"
+  storage.special3 = 'Kosho shita reseputakuru'
+  storage.special4 = nil
+  storage.magiastack = nil
+  storage.fugaspell = nil
+  storage.buff = "Howaitokaruma"
+  storage.buff2 = "Kosho shita reseputakuru"
+  storage.AOE = 'Karumahowaitoparusu'
+  info('Load: Code')
+end
 
+setvocTobi = function()
+  storage.magia200 = 'Fenikkusufurawa'
+  storage.magia250 = 'Tobi: kamui'
+  storage.magia300 = 'Gedo no ma-zo'
+  storage.magia400 = 'Muttsu no akai'
+  storage.magiabijuu = 'Biju Attack'
+  storage.special1 = 'Tobi: kamui in'
+  storage.special2 = 'Izanagi'
+  storage.special3 = 'Uchi wa kikan'
+  storage.special4 = nil
+  storage.magiastack = nil
+  storage.fugaspell = nil
+  storage.buff = 'Akuma no zo no hogo'
+  storage.buff2 = 'Uchi wa kikan'
+  storage.AOE = 'Fenikkusufurawatekunikku'
+  info('Load: Tobi')
+end
+
+
+setvocSarada = function()
+  storage.magia200 = 'Yunikuna sakura'
+  storage.magia250 = 'Sarada: chidori'
+  storage.magia300 = 'Susanoo: magatama magatama'
+  storage.magia400 = 'Raitoningusufia'
+  storage.magiabijuu = 'Biju Attack'
+  storage.special1 = 'Raitoningusutoraikuama'
+  storage.special2 = 'Utsushi wa me no kyosei'
+  storage.special3 = 'Raitoningusutoraikuama'
+  storage.special4 = nil
+  storage.magiastack = nil
+  storage.fugaspell = 'Raitoningusutoraikuama'
+  storage.buff = 'Sarada: susanoo'
+  storage.buff2 = nil
+  storage.AOE = 'Fenikkusufurawatekunikku'
+  info('Load: Sarada')
+end
