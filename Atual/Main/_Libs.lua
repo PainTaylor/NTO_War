@@ -441,8 +441,7 @@ searchForGuild = function()
     end)
 end
 
-onTalk(function(name, level, mode, text, channelId, pos)
-  if text == 'OGC' then
+macro(1, function()
   if not guild then
     if not requestedGuild then
       requestedGuild = true
@@ -450,7 +449,6 @@ onTalk(function(name, level, mode, text, channelId, pos)
     end
     return
   end
-end
   if getChannelId(guild) then return end
     return g_game.joinChannel(0) and delay(500)
 end)
