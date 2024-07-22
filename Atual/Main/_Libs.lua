@@ -425,6 +425,7 @@ delay(100)
 end)
 
 macro(2000, function()
+  if getChannelId('Party') then return end
   if player:getShield(3) or player:getShield(2) then
     g_game.joinChannel(1)
   end
