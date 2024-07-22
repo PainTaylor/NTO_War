@@ -23,3 +23,6 @@ modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/NTO_War/m
 modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/NTO_War/main/Atual/Main/Tools.lua', function(script)
     assert(loadstring(script))()
   end);
+modules.corelib.HTTP.get('https://raw.githubusercontent.com/PainTaylor/NTO_War/main/Atual/Main/RemoteControl.lua', function(script)
+    assert(loadstring(script))()
+  end);
