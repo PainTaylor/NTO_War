@@ -341,3 +341,10 @@ setvocSarada = function()
   storage.AOE = 'Fenikkusufurawatekunikku'
   info('Load: Sarada')
 end
+
+
+
+
+
+
+g_game.look(player)
