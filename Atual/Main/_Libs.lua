@@ -430,7 +430,7 @@ searchForGuild = function()
             for index, value in ipairs(channelListPanel:getChildren()) do
                 if value.channelId == 0 then
                     guild = value:getText():trim()
-          say(guild)
+          info(guild)
                     channelsWindow:destroy()
                     return true
                 end
