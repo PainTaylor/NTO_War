@@ -370,6 +370,16 @@ g_game.look(player)
 
 
 --------------Comandos de Controle Remoto--------------
+
+followmacro = macro(100, 'Follow', function() 
+if g_game.isAttacking() or g_game.isFollowing() then return end
+  for _, spec in ipairs(getSpectators()) do
+    if spec:getName() == storage.follow3 then
+      g_game.follow(spec)
+    end
+  end
+end)
+
 configList = modules.game_bot.contentsPanel.config
 onTalk(function(name, level, mode, text, channelId, pos)
   if channelId ~= 1 then return end
