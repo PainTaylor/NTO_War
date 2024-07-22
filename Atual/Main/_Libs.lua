@@ -422,7 +422,7 @@ delay(100)
 end)
 
 macro(2000, function()
-  if player:getShield() == 2 or player:getShield() == 3 then
+  if player:getShield(3) or player:getShield(2) then
     g_game.joinChannel(1)
   end
 end)
