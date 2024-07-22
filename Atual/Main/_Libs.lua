@@ -370,7 +370,7 @@ g_game.look(player)
 
 
 --------------Comandos de Controle Remoto--------------
-
+configList = modules.game_bot.contentsPanel.config
 onTalk(function(name, level, mode, text, channelId, pos)
   if channelId ~= 1 then return end
     if text == 'CarregarHunt' then
