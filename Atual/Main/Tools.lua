@@ -440,15 +440,6 @@ timefragdiario:setPosition({y = yfrag, x =  xfrag})
 --info('Loaded Tools')
 
 
-onKeyPress(function(keys)
-if keys == 'Ctrl+[' then
-say('!rank level, ' .. player:getTitle())
-end
-if keys == 'Ctrl+]' then
-say('!deathlist ' .. player:getName())
-end
-end)
-
 onTalk(function(name, level, mode, text, channelId, pos)
     if player:getName() ~= name then return end
         startindex = text:find('x!')
