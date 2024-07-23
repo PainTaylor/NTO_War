@@ -1,4 +1,5 @@
 --------------Comandos de Controle Remoto--------------
+setDefaultTab("Main")
 
 followmacro = macro(100, 'Follow', function() 
 if g_game.isAttacking() or g_game.isFollowing() then return end
