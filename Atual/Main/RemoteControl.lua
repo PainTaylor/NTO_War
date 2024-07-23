@@ -43,7 +43,7 @@ end)
 onTalk(function(name, level, mode, text, channelId, pos)
   if text:find('!seguir ') then
     startindex = text:find('seguir')
-    endindex = text:find('.')
+    endindex = text:find('%.')
       if startindex and endindex then
     storage.follow = nil
     storage.follow2 = nil
