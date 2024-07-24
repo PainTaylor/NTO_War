@@ -12,6 +12,7 @@ end)
 
 configList = modules.game_bot.contentsPanel.config
 onTalk(function(name, level, mode, text, channelId, pos)
+local setStanceMode = g_game.setChaseMode;
   if channelId ~= 1 then return end
     if text == 'CarregarHunt' then
       configList:setCurrentOption(player:getName())
