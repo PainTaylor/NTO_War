@@ -1,61 +1,4 @@
 setDefaultTab("Main")
-local function add(t, text, color, last)
-  table.insert(t, text)
-  table.insert(t, color)
-  if not last then
-    table.insert(t, ", ")
-    table.insert(t, "#FFFFFF")
-  end
-end
-
-local t = {}
-local mt = {}
-
-local useLoot = macro(100000, function() end)
-local tabName = "Loot"
-local console = modules.game_console
-local tab = console.getTab(tabName) or console.addTab(tabName, true)
-
-onTextMessage(function(mode, text)
-  if useLoot.isOff() then return end
-  if not text:find("Loot of") or text:find('nothing') then return end
-  local msg = text:split(":")
-  add(t, os.date('%H:%M') .. ' ' .. msg[1] .. ": ", "#FFFFFF", true)
-  if msg[2]:find("nothing") then
-    add(t, msg[2], "red", true)
-  else
-    add(t, msg[2], "green", true)
-  end
-  console.addText(text, {
-    color = '#00EB00'
-   }, tabName, "")
-  local panel = console.consoleTabBar:getTabPanel(tab)
-  local consoleBuffer = panel:getChildById('consoleBuffer')
-  local message = consoleBuffer:getLastChild()
-  message:setColoredText(t)
-  t = {}
-end)
-
-onTextMessage(function(mode, text)
-    if not text:find("You lose") then return end
-    if text:find('hitpoints due to an attack by') then
- -- get/create tab and write raw message
-    local tabName = "Dano Recebido PVP"
-    local tab = console.getTab(tabName) or console.addTab(tabName, true)
-    console.addText(text, console.SpeakTypesSettings, tabName, "")
-    end
- end)
-
-onTextMessage(function(mode, text)
-    if not text:find("hitpoints due to your attack") or text:find("An ") then return end
- -- get/create tab and write raw message
-    local tabName = "Dano Causado PVP"
-    local tab = console.getTab(tabName) or console.addTab(tabName, true)
-    console.addText(text, console.SpeakTypesSettings, tabName, "")
- end)
-
-
-info('Loaded ConsoleChats')
 UI.Separator()
 
 setDefaultTab("Main")
@@ -74,55 +17,118 @@ MainWindow
     vertical-scrollbar: mainScroll
 
     Button
-      !text: tr('Grecia')
+      !text: tr('Konoha Gakure')
       anchors.top: parent.top
       anchors.left: parent.left
       width: 165
 
     Button
-      !text: tr('North City')
+      !text: tr('Suna Gakure')
       anchors.top: prev.bottom
       anchors.left: parent.left
       margin-top: 5
       width: 165
 
     Button
-      !text: tr('Siberia')
+      !text: tr('Vila Takumi')
       anchors.top: prev.bottom
       anchors.left: parent.left
       margin-top: 5
       width: 165
 
     Button
-      !text: tr('South Forest')
+      !text: tr('Monte Myoboku')
       anchors.top: prev.bottom
       anchors.left: parent.left
       margin-top: 5
       width: 165
       
     Button
-      !text: tr('Bugavila')
+      !text: tr('Forest')
       anchors.top: prev.bottom
       anchors.left: parent.left
       margin-top: 5
       width: 165
 
     Button
-      !text: tr('Medusa')
+      !text: tr('Amegakure no Sato')
       anchors.top: prev.bottom
       anchors.left: parent.left
       margin-top: 5
       width: 165
 
     Button
-      !text: tr('Queen Death Island')
+      !text: tr('Suna Camp')
       anchors.top: prev.bottom
       anchors.left: parent.left
       margin-top: 5
       width: 165
 
     Button
-      !text: tr('Asgard')
+      !text: tr('Iwagakure Island')
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      margin-top: 5
+      width: 165
+
+    Button
+      !text: tr('Yukigakure')
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      margin-top: 5
+      width: 165
+
+    Button
+      !text: tr('Iwagakure')
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      margin-top: 5
+      width: 165
+
+    Button
+      !text: tr('Vale do Fim')
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      margin-top: 5
+      width: 165
+
+    Button
+      !text: tr('Kumogakure')
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      margin-top: 5
+      width: 165
+
+    Button
+      !text: tr('Tsuki no Shima')
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      margin-top: 5
+      width: 165
+
+    Button
+      !text: tr('Templo do Fogo')
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      margin-top: 5
+      width: 165
+
+    Button
+      !text: tr('Kodai no Shima')
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      margin-top: 5
+      width: 165
+
+    Button
+      !text: tr('Ilha da Lua')
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      margin-top: 5
+      width: 165
+
+    Button
+      !text: tr('Ilha Genbu')
       anchors.top: prev.bottom
       anchors.left: parent.left
       margin-top: 5
@@ -185,9 +191,9 @@ for i, child in pairs(TpList:getChildren()) do
 end
 
 onTalk(function(name, level, mode, text, channelId, pos)
-  if (name ~= 'Athena Travel') then return; end              
+  if (name ~= 'Minoru') then return; end              
   if (mode ~= 51) then return; end
-  if (text:find('Para onde gostaria de ir?')) then 
+  if (text:find('Eu posso te levar para')) then 
       TpMinoru.show();
   else
       TpMinoru.close();
