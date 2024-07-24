@@ -59,6 +59,71 @@ onTalk(function(name, level, mode, text, channelId, pos)
   end
 end)
 
+onTalk(function(name, level, mode, text, channelId, pos)
+    startindex = text:find('Attack: ')
+    endindex = text:find('%.')
+      if startindex and endindex then
+    target = text:sub(startindex+7,endindex-1)
+    --pegar criaturas por id, e comparar IDs dps colocar o callback de targetar.
+  end
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if text:find('Travel: ') then
+    if text:find('konoha') then
+      travelkonoha()
+    end
+    if text:find('Sunagakure') then
+      travelsuna()
+    end
+    if text:find('takumi') then
+      travelvtakumi()
+    end
+    if text:find('monte') then
+      travelMonteMyuboki()
+    end
+    if text:find('forest') then
+      travelforest()
+    end
+    if text:find('amegakure') then
+      travelamegakure()
+    end
+    if text:find('suna camp') then
+      travelsunacamp()
+    end
+    if text:find('ilha iwa') then
+      traveliwagakureisl()
+    end
+    if text:find('yuki') then
+      travelYukigakure()
+    end
+    if text:find('iwagakure') then
+      traveliwagakure()
+    end
+    if text:find('vdf') then
+      travelvdf()
+    end
+    if text:find('kumogakure') then
+      travelkumogakure()
+    end
+    if text:find('tsuki') then
+      travelTsuki()
+    end
+    if text:find('templo') then
+      travelTFogo()
+    end
+    if text:find('kodai') then
+      travelKodai()
+    end
+    if text:find('lua') then
+      travelmoon()
+    end
+    if text:find('genbu') then
+      travelgenbu()
+    end
+  end
+end)
+
 macro(1, function()
 if player:getShield() > 0 then return end
 for _,PT in ipairs(getSpectators(posz())) do
@@ -104,4 +169,7 @@ onKeyDown(function(keys)
   if keys == 'J' then
     sayChannel(1, 'ataquestand')
   end
+  --if keys == 'H' then
+  --  sayChannel(1, 'Attack: ' .. Target .. '%,')
+  --end
 end)
