@@ -78,3 +78,30 @@ macro(2000, function()
     g_game.joinChannel(1)
   end
 end)
+
+
+remotecontrol = macro(1000, 'RemoteControl', function()end)
+onKeyDown(function(keys)
+  if modules.game_console:isChatEnabled() and remotecontrol.isOff() then return end
+  if keys == 'P' then
+    sayChannel(1, 'pare de seguir')
+  end
+  if keys == 'L' then
+    sayChannel(1, 'Siga')
+  end
+  if keys == 'O' then
+    sayChannel(1, 'ligar target')
+  end
+  if keys == 'I' then
+    sayChannel(1, 'desligar target')
+  end
+  if keys == 'U' then
+    sayChannel(1, 'desbugar Follow')
+  end
+  if keys == 'k' then
+    sayChannel(1, 'ataquefollow')
+  end
+  if keys == 'J' then
+    sayChannel(1, 'ataquestand')
+  end
+end)
