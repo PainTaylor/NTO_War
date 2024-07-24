@@ -326,6 +326,7 @@ onTalk(function(name, level, mode, text, channelId, pos)
 end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
+  if channelId ~= 1 then return end
   if text:find('Travel: ') then
     if text:find('konoha') then
       travelkonoha()
