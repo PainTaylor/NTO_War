@@ -38,6 +38,12 @@ onTalk(function(name, level, mode, text, channelId, pos)
     if text == 'desbugar Follow' then
       g_game.cancelFollow()
     end
+    if text == 'ataquefollow' then
+      setStanceMode(1)
+    end
+    if text == 'ataquestand' then
+      setStanceMode(0)
+    end
 end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
