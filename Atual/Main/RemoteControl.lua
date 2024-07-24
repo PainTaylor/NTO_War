@@ -1,3 +1,260 @@
+------------------------Declarar Funçoes-----------
+
+travelkonoha = function()
+  for _, spec in ipairs(getSpectators(posz())) do
+    if spec:getName() == 'Minoru' then
+      g_game.follow(spec)
+    end
+  end
+  schedule(1000, function()
+    NPC.say('hi')
+  end)
+  schedule(1500, function()
+    NPC.say('Konoha Gakure')
+  end)
+  delay(2600)
+end
+
+travelsuna = function()
+  for _, spec in ipairs(getSpectators(posz())) do
+    if spec:getName() == 'Minoru' then
+      g_game.follow(spec)
+    end
+  end
+  schedule(1000, function()
+    NPC.say('hi')
+  end)
+  schedule(1500, function()
+    NPC.say('Suna Gakure')
+  end)
+  delay(2600)
+end
+
+travelvtakumi = function()
+  for _, spec in ipairs(getSpectators(posz())) do
+    if spec:getName() == 'Minoru' then
+      g_game.follow(spec)
+    end
+  end
+  schedule(1000, function()
+    NPC.say('hi')
+  end)
+  schedule(1500, function()
+    NPC.say('Vila Takumi')
+  end)
+  delay(2600)
+end
+
+travelMonteMyuboki = function()
+  for _, spec in ipairs(getSpectators(posz())) do
+    if spec:getName() == 'Minoru' then
+      g_game.follow(spec)
+    end
+  end
+  schedule(1000, function()
+    NPC.say('hi')
+  end)
+  schedule(1500, function()
+    NPC.say('Monte Myoboku')
+  end)
+  delay(2600)
+end
+
+travelforest = function()
+  for _, spec in ipairs(getSpectators(posz())) do
+    if spec:getName() == 'Minoru' then
+      g_game.follow(spec)
+    end
+  end
+  schedule(1000, function()
+    NPC.say('hi')
+  end)
+  schedule(1500, function()
+    NPC.say('Forest')
+  end)
+  delay(2600)
+end
+
+travelamegakure = function()
+  for _, spec in ipairs(getSpectators(posz())) do
+    if spec:getName() == 'Minoru' then
+      g_game.follow(spec)
+    end
+  end
+  schedule(1000, function()
+    NPC.say('hi')
+  end)
+  schedule(1500, function()
+    NPC.say('Amegakure no Sato')
+  end)
+  delay(2600)
+end
+
+travelsunacamp = function()
+  for _, spec in ipairs(getSpectators(posz())) do
+    if spec:getName() == 'Minoru' then
+      g_game.follow(spec)
+    end
+  end
+  schedule(1000, function()
+    NPC.say('hi')
+  end)
+  schedule(1500, function()
+    NPC.say('Suna Camp')
+  end)
+  delay(2600)
+end
+
+traveliwagakureisl = function()
+  for _, spec in ipairs(getSpectators(posz())) do
+    if spec:getName() == 'Minoru' then
+      g_game.follow(spec)
+    end
+  end
+  schedule(1000, function()
+    NPC.say('hi')
+  end)
+  schedule(1500, function()
+    NPC.say('Iwagakure Island')
+  end)
+  delay(2600)
+end
+
+travelYukigakure = function()
+  for _, spec in ipairs(getSpectators(posz())) do
+    if spec:getName() == 'Minoru' then
+      g_game.follow(spec)
+    end
+  end
+  schedule(1000, function()
+    NPC.say('hi')
+  end)
+  schedule(1500, function()
+    NPC.say('Yukigakure')
+  end)
+  delay(2600)
+end
+
+traveliwagakure = function()
+  for _, spec in ipairs(getSpectators(posz())) do
+    if spec:getName() == 'Minoru' then
+      g_game.follow(spec)
+    end
+  end
+  schedule(1000, function()
+    NPC.say('hi')
+  end)
+  schedule(1500, function()
+    NPC.say('Iwagakure')
+  end)
+  delay(2600)
+end
+
+travelvdf = function()
+  for _, spec in ipairs(getSpectators(posz())) do
+    if spec:getName() == 'Minoru' then
+      g_game.follow(spec)
+    end
+  end
+  schedule(1000, function()
+    NPC.say('hi')
+  end)
+  schedule(1500, function()
+    NPC.say('Vale do Fim')
+  end)
+  delay(2600)
+end
+
+travelkumogakure = function()
+  for _, spec in ipairs(getSpectators(posz())) do
+    if spec:getName() == 'Minoru' then
+      g_game.follow(spec)
+    end
+  end
+  schedule(1000, function()
+    NPC.say('hi')
+  end)
+  schedule(1500, function()
+    NPC.say('Kumogakure')
+  end)
+  delay(2600)
+end
+
+travelTsuki = function()
+  for _, spec in ipairs(getSpectators(posz())) do
+    if spec:getName() == 'Minoru' then
+      g_game.follow(spec)
+    end
+  end
+  schedule(1000, function()
+    NPC.say('hi')
+  end)
+  schedule(1500, function()
+    NPC.say('Tsuki no Shima')
+  end)
+  delay(2600)
+end
+
+travelTFogo = function()
+  for _, spec in ipairs(getSpectators(posz())) do
+    if spec:getName() == 'Minoru' then
+      g_game.follow(spec)
+    end
+  end
+  schedule(1000, function()
+    NPC.say('hi')
+  end)
+  schedule(1500, function()
+    NPC.say('Templo do Fogo')
+  end)
+  delay(2600)
+end
+
+travelKodai = function()
+  for _, spec in ipairs(getSpectators(posz())) do
+    if spec:getName() == 'Minoru' then
+      g_game.follow(spec)
+    end
+  end
+  schedule(1000, function()
+    NPC.say('hi')
+  end)
+  schedule(1500, function()
+    NPC.say('Kodai no Shima')
+  end)
+  delay(2600)
+end
+
+travelmoon = function()
+  for _, spec in ipairs(getSpectators(posz())) do
+    if spec:getName() == 'Minoru' then
+      g_game.follow(spec)
+    end
+  end
+  schedule(1000, function()
+    NPC.say('hi')
+  end)
+  schedule(1500, function()
+    NPC.say('Ilha da Lua')
+  end)
+  delay(2600)
+end
+
+travelgenbu = function()
+  for _, spec in ipairs(getSpectators(posz())) do
+    if spec:getName() == 'Minoru' then
+      g_game.follow(spec)
+    end
+  end
+  schedule(1000, function()
+    NPC.say('hi')
+  end)
+  schedule(1500, function()
+    NPC.say('Ilha Genbu')
+  end)
+  delay(2600)
+end
+
 --------------Comandos de Controle Remoto--------------
 setDefaultTab("Main")
 
