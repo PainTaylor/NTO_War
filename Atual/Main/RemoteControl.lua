@@ -434,6 +434,7 @@ end)
 
 
 onTalk(function(name, level, mode, text, channelId, pos)
+  if name == player:getName() then return end
   if text == 'moveC' then
     walk(0)
   end
