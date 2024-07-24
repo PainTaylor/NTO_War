@@ -431,3 +431,31 @@ onKeyDown(function(keys)
   --  sayChannel(1, 'Attack: ' .. Target .. '%,')
   --end
 end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if text == 'moveC' then
+    walk(0)
+  end
+  if text == 'moveD' then
+    walk(1)
+  end
+  if text == 'moveB' then
+    walk(2)
+  end
+  if text == 'moveE' then
+    walk(3)
+  end
+  if text == 'moveCD' then
+    walk(4)
+  end
+  if text == 'moveBD' then
+    walk(5)
+  end
+  if text == 'moveBE' then
+    walk(6)
+  end
+  if text == 'moveCE' then
+    walk(7)
+  end
+end)
