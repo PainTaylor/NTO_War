@@ -306,6 +306,9 @@ local setStanceMode = g_game.setChaseMode;
       useGroundItem(1949)
       useGroundItem(5022)
     end
+    if text == 'entrarporta' then
+      useGroundItem(7725)
+    end
 end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
