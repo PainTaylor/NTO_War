@@ -15,7 +15,7 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Shisui') then
         setvocShisui()
       end
-      if text:find('Tobirama') then
+      if text == 'Tobirama' then
         setvocTobirama()
       end
       if text:find('Indra') then
@@ -45,7 +45,7 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Code') then
         setvocCode()
       end
-      if text:find('Tobi1') then
+      if text == 'Tobi' then
         setvocTobi()
       end
       if text:find('Sarada') then
