@@ -302,6 +302,10 @@ local setStanceMode = g_game.setChaseMode;
     if text == 'ataquestand' then
       setStanceMode(0)
     end
+    if text == 'entrartp' then
+      useGroundItem(1949)
+      useGroundItem(5022)
+    end
 end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
@@ -461,3 +465,4 @@ onTalk(function(name, level, mode, text, channelId, pos)
     walk(7)
   end
 end)
+
