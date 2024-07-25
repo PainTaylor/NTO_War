@@ -8,7 +8,7 @@ function TesteWalk(id)
         for j, item in ipairs(tile:getItems()) do
             if item:getId() == id then
                 dest = item
-                ItemPos = dest:getPos()
+                ItemPos = tile:getPos()
                 break
             end
         end
