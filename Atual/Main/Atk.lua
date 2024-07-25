@@ -2,11 +2,19 @@ setDefaultTab("Atk")
 
 local function Combo()
  if not g_game.isAttacking() then return false end
-  say(storage.magia200)
-  say(storage.magia300)
   say(storage.magia400)
-  say(storage.magia250)
   say(storage.magiabijuu)
+  say(storage.magia300)
+  say(storage.magia200)
+  say(storage.magia250)
+end
+
+local function Combo2()
+ if not g_game.isAttacking() then return false end
+  say(storage.magia400)
+  say(storage.magiabijuu)
+  say(storage.magia300)
+  say(storage.magia200)
 end
 
 storage.atkdelay = now
@@ -16,6 +24,14 @@ macro(200, 'combo', function()
   	Combo()
   end
 end)
+
+macro(200, 'combo2', function()
+  if not g_game.isAttacking() then return end
+  if storage.atkdelay < now then
+    Combo2()
+  end
+end)
+
 
 macro(200, 'comboSpecial', function()
   if not g_game.isAttacking() then return end

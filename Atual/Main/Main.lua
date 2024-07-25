@@ -177,9 +177,8 @@ windowUI.closeButton.onClick = function()
 end
 
 TpMinoru.tpToCity = function(city)
-    NPC.say(city);
     schedule(500, function()
-        NPC.say('yes');
+        NPC.say(city);
     end);
 end
 
