@@ -54,6 +54,9 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Tsunade') then
         setvocTsunade()
       end
+      if text:find('Naruto Barion') then
+        setvocNaruto()
+      end
     end
   end
 end)
