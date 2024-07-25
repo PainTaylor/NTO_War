@@ -365,5 +365,24 @@ setvocTsunade = function()
   info('Load: Tsunade')
 end
 
+setvocNaruto = function()
+  storage.magia200 = 'Baryon Mode: Borutekkusu'
+  storage.magia250 = 'Baryon Mode: Disupureisumento'
+  storage.magia300 = 'Baryon Mode: Dai Hoko'
+  storage.magia400 = 'Baryon Mode: Bakuhatsu tagu'
+  storage.magiabijuu = 'Biju Attack'
+  storage.special1 = 'Cho cho rasen'
+  storage.special2 = 'Kage No Kuron'
+  storage.special3 = 'Baryon Mode'
+  storage.special4 = nil
+  storage.magiastack = nil
+  storage.fugaspell = 'Kage No Kuron'
+  storage.SHEAL = 'Hyaku-gun no insho'
+  storage.buff = 'Kurama Protection'
+  storage.buff2 = 'Baryon Mode'
+  storage.AOE = 'Baryon Mode: Dankotaru ken'
+  info('Load: Naruto')
+end
+
 
 g_game.look(player)
