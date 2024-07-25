@@ -21,6 +21,10 @@ function TesteWalk(id)
     end
 end
 
+postp1 = {675, 152, 10}
+postp2 = {675, 152, 11}
+postp3 = {675, 152, 12}
+
 travelkonoha = function()
   for _, spec in ipairs(getSpectators(posz())) do
     if spec:getName() == 'Minoru' then
@@ -329,6 +333,15 @@ local setStanceMode = g_game.setChaseMode;
     end
     if text == 'entrarporta' then
       useGroundItem(7725)
+    end
+    if text == 'walktp1' then
+      autoWalk(postp1)
+    end
+    if text == 'walktp2' then
+      autoWalk(postp2)
+    end
+    if text == 'walktp3' then
+      autoWalk(postp3)
     end
 end)
 
