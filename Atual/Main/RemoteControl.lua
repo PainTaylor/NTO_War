@@ -1,30 +1,5 @@
 ------------------------Declarar Funçoes-----------
 
-function TesteWalk(id)
-    if not id then return false end
-
-    local dest = nil
-    for i, tile in ipairs(g_map.getTiles(posz())) do
-        for j, item in ipairs(tile:getItems()) do
-            if item:getId() == id then
-                dest = item
-                ItemPos = tile:getPos()
-                break
-            end
-        end
-    end
-
-    if dest then
-        return  autoWalk(ItemPos, 20, {ignoreNonPathable = false, precision = 0})
-    else
-        return false
-    end
-end
-
-postp1 = {675, 152, 10}
-postp2 = {675, 152, 11}
-postp3 = {675, 152, 12}
-
 travelkonoha = function()
   for _, spec in ipairs(getSpectators(posz())) do
     if spec:getName() == 'Minoru' then
@@ -328,20 +303,11 @@ local setStanceMode = g_game.setChaseMode;
       setStanceMode(0)
     end
     if text == 'entrartp' then
-      TesteWalk(1949)
-      TesteWalk(5022)
+      useGroundItem(1949)
+      useGroundItem(5022)
     end
     if text == 'entrarporta' then
       useGroundItem(7725)
-    end
-    if text == 'walktp1' then
-      autoWalk(postp1)
-    end
-    if text == 'walktp2' then
-      autoWalk(postp2)
-    end
-    if text == 'walktp3' then
-      autoWalk(postp3)
     end
 end)
 
