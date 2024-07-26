@@ -409,35 +409,61 @@ macro(2000, function()
   end
 end)
 
+sotrage.cooldowncomand = now
+onTalk(function(name, level, mode, text, channelId, pos)
+  if name = player:getName() then
+  if text == 'moveC' or text == 'moveD' or text == 'moveB' or text == 'moveE' or text == 'moveCD' or text == 'moveBD' or text == 'moveBE' or text == 'moveCE' then
+    storage.cooldowncomand = now + 1000
+  end
+end)
 
 remotecontrol = macro(1000, 'RemoteControl', function()end)
 onKeyDown(function(keys)
     if getChannelId('Party') then return end
   if modules.game_console:isChatEnabled() or remotecontrol.isOff() then return end
-  if keys == 'P' then
+  if keys == '' then
     sayChannel(1, 'pare de seguir')
   end
-  if keys == 'L' then
+  if keys == '' then
     sayChannel(1, 'Siga')
   end
-  if keys == 'O' then
+  if keys == '' then
     sayChannel(1, 'ligar target')
   end
-  if keys == 'I' then
+  if keys == '' then
     sayChannel(1, 'desligar target')
   end
-  if keys == 'U' then
+  if keys == '' then
     sayChannel(1, 'desbugar Follow')
   end
-  if keys == 'k' then
+  if keys == '' then
     sayChannel(1, 'ataquefollow')
   end
-  if keys == 'J' then
+  if keys == '' then
     sayChannel(1, 'ataquestand')
   end
   --if keys == 'H' then
   --  sayChannel(1, 'Attack: ' .. Target .. '%,')
   --end
+end)
+
+onKeyDown(function(keys)
+    if getChannelId('Party') then return end
+  if modules.game_console:isChatEnabled() or remotecontrol.isOff() then return end
+  if storage.cooldowncomand < now then
+    if keys == 'I' then
+      sayChannel(1, 'moveC')
+    end
+    if keys == 'L' then
+      sayChannel(1, 'moveD')
+    end
+    if keys == 'K' then
+      sayChannel(1, 'moveB')
+    end
+    if keys == 'J' then
+      sayChannel(1, 'moveE')
+    end
+  end
 end)
 
 
@@ -468,4 +494,3 @@ onTalk(function(name, level, mode, text, channelId, pos)
     walk(7)
   end
 end)
-
