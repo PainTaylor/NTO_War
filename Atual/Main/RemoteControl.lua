@@ -449,21 +449,39 @@ onKeyDown(function(keys)
   --end
 end)
 
+
+n = 0
 onKeyPress(function(keys)
     if not getChannelId('Party') then return end
   if modules.game_console:isChatEnabled() or remotecontrol.isOff() then return end
   if storage.cooldowncomand < now then
     if keys == 'I' then
-      sayChannel(1, 'moveC')
+      sayChannel(1, 'moveC' .. n)
+      n = n + 1
+      if n > 10 then
+        n=0
+      end
     end
     if keys == 'L' then
-      sayChannel(1, 'moveD')
+      sayChannel(1, 'moveD' .. n)
+      n = n + 1
+      if n > 10 then
+        n=0
+      end
     end
     if keys == 'K' then
-      sayChannel(1, 'moveB')
+      sayChannel(1, 'moveB' .. n)
+      n = n + 1
+      if n > 10 then
+        n=0
+      end
     end
     if keys == 'J' then
-      sayChannel(1, 'moveE')
+      sayChannel(1, 'moveE' .. n)
+      n = n + 1
+      if n > 10 then
+        n=0
+      end
     end
   end
 end)
@@ -479,28 +497,28 @@ end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
   if name == player:getName() then return end
-  if text == 'moveC' then
+  if text:find('moveC') then
     walk(0)
   end
-  if text == 'moveD' then
+  if text:find('moveD') then
     walk(1)
   end
-  if text == 'moveB' then
+  if text:find('moveB') then
     walk(2)
   end
-  if text == 'moveE' then
+  if text:find('moveE') then
     walk(3)
   end
-  if text == 'moveCD' then
-    walk(4)
-  end
-  if text == 'moveBD' then
-    walk(5)
-  end
-  if text == 'moveBE' then
-    walk(6)
-  end
-  if text == 'moveCE' then
-    walk(7)
-  end
+--  if text:find('moveCD') then
+--    walk(4)
+--  end
+--  if text:find('moveBD') then
+--    walk(5)
+--  end
+--  if text:find('moveBE') then
+--    walk(6)
+--  end
+--  if text:find('moveCE') then
+--    walk(7)
+--  end
 end)
