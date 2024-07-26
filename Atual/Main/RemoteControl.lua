@@ -420,7 +420,7 @@ end)
 
 remotecontrol = macro(1000, 'RemoteControl', function()end)
 onKeyDown(function(keys)
-    if getChannelId('Party') then return end
+    if not getChannelId('Party') then return end
   if modules.game_console:isChatEnabled() or remotecontrol.isOff() then return end
   if keys == '' then
     sayChannel(1, 'pare de seguir')
