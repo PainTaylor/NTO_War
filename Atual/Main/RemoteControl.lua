@@ -470,7 +470,7 @@ end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
   if name == player:getName() then
-    if text = lastmensage then
+    if text == lastmensage then
       say('xD')
     end
     lastmensage = text
