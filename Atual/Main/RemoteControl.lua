@@ -412,8 +412,9 @@ end)
 sotrage.cooldowncomand = now
 onTalk(function(name, level, mode, text, channelId, pos)
   if name == player:getName() then
-  if text == 'moveC' or text == 'moveD' or text == 'moveB' or text == 'moveE' or text == 'moveCD' or text == 'moveBD' or text == 'moveBE' or text == 'moveCE' then
-    storage.cooldowncomand = now + 1000
+    if text == 'moveC' or text == 'moveD' or text == 'moveB' or text == 'moveE' or text == 'moveCD' or text == 'moveBD' or text == 'moveBE' or text == 'moveCE' then
+      storage.cooldowncomand = now + 1000
+    end
   end
 end)
 
