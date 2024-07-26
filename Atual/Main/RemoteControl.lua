@@ -447,7 +447,7 @@ onKeyDown(function(keys)
   --end
 end)
 
-onKeyDown(function(keys)
+onKeyPess(function(keys)
     if getChannelId('Party') then return end
   if modules.game_console:isChatEnabled() or remotecontrol.isOff() then return end
   if storage.cooldowncomand < now then
