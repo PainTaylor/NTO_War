@@ -1,6 +1,14 @@
 setDefaultTab("HP")
 storage.exaustheal = now
-storage.healspell = 'big regeneration'
+storage.healspell = 'otsutsuki regeneration'
+
+onTextMessage(function(mode, text)
+  if text:find('precisa consumir uma momoshiki fruit para usar este jutsu') then
+    storage.healspell = 'big regeneration'
+  end
+end)
+
+
 healmacro = macro(200, 'heal', function()
   if hppercent() < 99 and storage.exaustheal < now then
     say(storage.healspell)
