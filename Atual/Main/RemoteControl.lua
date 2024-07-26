@@ -468,14 +468,14 @@ onKeyPress(function(keys)
   end
 end)
 
-onTalk(function(name, level, mode, text, channelId, pos)
-  if name == player:getName() then
-    if text == lastmensage then
-      say('xD')
-    end
-    lastmensage = text
-  end
-end)
+--onTalk(function(name, level, mode, text, channelId, pos)
+--  if name == player:getName() then
+--    if text == lastmensage then
+--      say('xD')
+--    end
+--    lastmensage = text
+--  end
+--end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
   if name == player:getName() then return end
