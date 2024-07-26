@@ -308,6 +308,7 @@ local setStanceMode = g_game.setChaseMode;
     end
     if text == 'entrarporta' then
       useGroundItem(7725)
+      useGroundItem(1646)
     end
 end)
 
