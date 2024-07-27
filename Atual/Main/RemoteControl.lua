@@ -310,6 +310,13 @@ local setStanceMode = g_game.setChaseMode;
       useGroundItem(7725)
       useGroundItem(1646)
     end
+    if text == 'CaveSword' then
+      CaveBot.setCurrentProfile('entrartpquest')
+      CaveBot.setOn()
+    end
+    if text == 'desligarcave' then
+      CaveBot.setOff()
+    end
 end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
