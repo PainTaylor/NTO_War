@@ -10,21 +10,6 @@ CaveBot.setCurrentProfile = function(name)
   CaveBot.setOn()
 end
 
-CaveBot.delay = function(value)
-  cavebotMacro.delay = math.max(cavebotMacro.delay or 0, now + value)
-end
-
-CaveBot.gotoLabel = function(label)
-  label = label:lower()
-  for index, child in ipairs(ui.list:getChildren()) do
-    if child.action == "label" and child.value:lower() == label then    
-      ui.list:focusChild(child)
-      return true
-    end
-  end
-  return false
-end
-
 travelkonoha = function()
   for _, spec in ipairs(getSpectators(posz())) do
     if spec:getName() == 'Minoru' then
