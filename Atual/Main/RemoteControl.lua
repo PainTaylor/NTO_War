@@ -1,15 +1,5 @@
 ------------------------Declarar Funçoes-----------
 
-local botConfigName = modules.game_bot.contentsPanel.config:getCurrentOption().text
-CaveBot.setCurrentProfile = function(name)
-  if not g_resources.fileExists("/bot/"..botConfigName.."/cavebot_configs/"..name..".cfg") then
-    return warn("there is no cavebot profile with that name!")
-  end
-  CaveBot.setOff()
-  storage._configs.cavebot_configs.selected = name
-  CaveBot.setOn()
-end
-
 travelkonoha = function()
   for _, spec in ipairs(getSpectators(posz())) do
     if spec:getName() == 'Minoru' then
@@ -320,8 +310,7 @@ local setStanceMode = g_game.setChaseMode;
       useGroundItem(7725)
       useGroundItem(1646)
     end
-    if text == 'CaveSword' then
-      CaveBot.setCurrentProfile('entrartpquest')
+    if text == 'ligarcave' then
       CaveBot.setOn()
     end
     if text == 'desligarcave' then
