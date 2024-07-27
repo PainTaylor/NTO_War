@@ -413,7 +413,7 @@ end)
 storage.cooldowncomand = now
 onTalk(function(name, level, mode, text, channelId, pos)
   if name == player:getName() then
-    if text == 'moveC' or text == 'moveD' or text == 'moveB' or text == 'moveE' or text == 'moveCD' or text == 'moveBD' or text == 'moveBE' or text == 'moveCE' then
+    if text:find('move') then
       storage.cooldowncomand = now + 2000
     end
   end
