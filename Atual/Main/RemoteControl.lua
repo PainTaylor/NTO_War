@@ -1,5 +1,30 @@
 ------------------------Declarar Funçoes-----------
 
+local botConfigName = modules.game_bot.contentsPanel.config:getCurrentOption().text
+CaveBot.setCurrentProfile = function(name)
+  if not g_resources.fileExists("/bot/"..botConfigName.."/cavebot_configs/"..name..".cfg") then
+    return warn("there is no cavebot profile with that name!")
+  end
+  CaveBot.setOff()
+  storage._configs.cavebot_configs.selected = name
+  CaveBot.setOn()
+end
+
+CaveBot.delay = function(value)
+  cavebotMacro.delay = math.max(cavebotMacro.delay or 0, now + value)
+end
+
+CaveBot.gotoLabel = function(label)
+  label = label:lower()
+  for index, child in ipairs(ui.list:getChildren()) do
+    if child.action == "label" and child.value:lower() == label then    
+      ui.list:focusChild(child)
+      return true
+    end
+  end
+  return false
+end
+
 travelkonoha = function()
   for _, spec in ipairs(getSpectators(posz())) do
     if spec:getName() == 'Minoru' then
