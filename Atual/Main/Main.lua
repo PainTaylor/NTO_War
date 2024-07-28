@@ -264,7 +264,6 @@ talkedSpecs = {}
 
 
 aviso = macro(100, 'aviso guild', function()
-  if isinGreciaCity() or isInThermalspot() then return end
     for name, _ in pairs(talkedSpecs) do
         if not getCreatureByName(name) then
             talkedSpecs[name] = nil
