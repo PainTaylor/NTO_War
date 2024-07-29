@@ -316,6 +316,14 @@ local setStanceMode = g_game.setChaseMode;
     if text == 'desligarcave' then
       CaveBot.setOff()
     end
+    if text == 'enemyon' then
+      chicletao.setOn()
+      g_game:setSafeFight(0)
+    end
+    if text == 'enemyoff' then
+      chicletao.setOff()
+      g_game:setSafeFight(1)
+    end
 end)
 
 onTalk(function(name, level, mode, text, channelId, pos)
@@ -417,47 +425,49 @@ macro(2000, function()
 end)
 
 storage.cooldowncomand = now
-onTalk(function(name, level, mode, text, channelId, pos)
-  if name == player:getName() then
-    if text:find('move') then
-      storage.cooldowncomand = now + 2000
-    end
-  end
-end)
 
 remotecontrol = macro(1000, 'RemoteControl', function()end)
 onKeyDown(function(keys)
     if not getChannelId('Party') then return end
   if modules.game_console:isChatEnabled() or remotecontrol.isOff() then return end
+    if storage.cooldowncomand < now then
   if keys == '' then
     sayChannel(1, 'pare de seguir')
+    storage.cooldowncomand = now + 2000
   end
   if keys == '' then
     sayChannel(1, 'Siga')
+    storage.cooldowncomand = now + 2000
   end
   if keys == '' then
     sayChannel(1, 'ligar target')
+    storage.cooldowncomand = now + 2000
   end
   if keys == '' then
     sayChannel(1, 'desligar target')
+    storage.cooldowncomand = now + 2000
   end
   if keys == '' then
     sayChannel(1, 'desbugar Follow')
+    storage.cooldowncomand = now + 2000
   end
   if keys == '' then
     sayChannel(1, 'ataquefollow')
+    storage.cooldowncomand = now + 2000
   end
   if keys == '' then
     sayChannel(1, 'ataquestand')
+    storage.cooldowncomand = now + 2000
   end
   --if keys == 'H' then
   --  sayChannel(1, 'Attack: ' .. Target .. '%,')
   --end
+end
 end)
 
 
 n = 0
-onKeyPress(function(keys)
+onKeyDown(function(keys)
     if not getChannelId('Party') then return end
   if modules.game_console:isChatEnabled() or remotecontrol.isOff() then return end
   if storage.cooldowncomand < now then
@@ -466,6 +476,7 @@ onKeyPress(function(keys)
       n = n + 1
       if n > 10 then
         n=0
+        storage.cooldowncomand = now + 2000
       end
     end
     if keys == 'L' then
@@ -473,6 +484,7 @@ onKeyPress(function(keys)
       n = n + 1
       if n > 10 then
         n=0
+        storage.cooldowncomand = now + 2000
       end
     end
     if keys == 'K' then
@@ -480,6 +492,7 @@ onKeyPress(function(keys)
       n = n + 1
       if n > 10 then
         n=0
+        storage.cooldowncomand = now + 2000
       end
     end
     if keys == 'J' then
@@ -487,6 +500,7 @@ onKeyPress(function(keys)
       n = n + 1
       if n > 10 then
         n=0
+        storage.cooldowncomand = now + 2000
       end
     end
   end
