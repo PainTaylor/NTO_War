@@ -60,9 +60,14 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Kawaki') then
         setvocKawaki()
       end
+      if text:find('Minato') then
+        setvocMinato()
+      end
     end
   end
 end)
+
+
 loadvoc = false
 onTextMessage(function(mode, text)
   if loadvoc == true then return end
@@ -127,6 +132,9 @@ onTextMessage(function(mode, text)
       end
       if class:find('Kawaki') then
         setvocKawaki()
+      end
+      if class:find('Minato') then
+        setvocMinato()
       end
       loadvoc = true
     end
