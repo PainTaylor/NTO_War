@@ -57,6 +57,9 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Naruto Barion') then
         setvocNaruto()
       end
+      if text:find('Kawaki') then
+        setvocKawaki()
+      end
     end
   end
 end)
@@ -385,6 +388,25 @@ setvocNaruto = function()
   storage.buff2 = 'Baryon Mode'
   storage.AOE = 'Baryon Mode: Dankotaru ken'
   info('Load: Naruto')
+end
+
+setvocKawaki = function()
+  storage.magia200 = 'Karma: Hakai'
+  storage.magia250 = 'Karma: Seigyo funo'
+  storage.magia300 = 'Rasengan: Yunizonansu'
+  storage.magia400 = 'Karma: Jiku Potaru'
+  storage.magiabijuu = 'Biju Attack'
+  storage.special1 = 'Kumade'
+  storage.special2 = 'Fairu no kakikomi'
+  storage.special3 = 'Burst Mode'
+  storage.special4 = nil
+  storage.magiastack = nil
+  storage.fugaspell = ''
+  storage.SHEAL = nil
+  storage.buff = 'Karma Protection'
+  storage.buff2 = 'Burst Mode'
+  storage.AOE = nil
+  info('Load: Kawaki')
 end
 
 
