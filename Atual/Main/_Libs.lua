@@ -484,5 +484,25 @@ setvocKawaki = function()
   info('Load: ' .. personagem)
 end
 
+setvocMinato = function()
+  storage.magia200 = 'Hiraishinnojutsu'
+  storage.magia250 = 'Rasen maru basuto'
+  storage.magia300 = 'Bijuu yuubakudan'
+  storage.magia400 = 'Hi raijin: Reberu'
+  storage.magiabijuu = 'Biju Attack'
+  storage.special1 = 'Shinigami no fuin'
+  storage.special2 = 'Shadoukurontekunikku'
+  storage.special3 = 'Tsudzurao chakuramodo'
+  storage.special4 = 'Hiraishin No Jutsu'
+  storage.magiastack = nil
+  storage.fugaspell = 'Shadoukurontekunikku'
+  storage.SHEAL = nil
+  storage.buff = 'Kiiro no furasshu'
+  storage.buff2 = 'Tsudzurao chakuramodo'
+  storage.AOE = nil
+  personagem = 'Minato'
+  info('Load: ' .. personagem)
+end
+
 
 g_game.look(player)
