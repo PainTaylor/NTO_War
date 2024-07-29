@@ -381,3 +381,9 @@ NPC.say('ilha genbu')
 end)
 delay(1100)
 end
+
+onTalk(function(name, level, mode, text, channelId, pos)
+	if text:find('voce nao esta nessa saga') then
+		CaveBot.setOff()
+	end
+end)
