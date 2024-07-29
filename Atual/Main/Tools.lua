@@ -398,7 +398,7 @@ end)
 macro(100, 'Safe Red', function()
   if fragdiario == nil and LimiteFragDiario == nil then return end
   if (fragdiario >= LimiteFragDiario) then
-    g_game:setSafeFight(1)
+    g_game.setSafeFight(1)
     atkname.setOff()
   end
 end)
