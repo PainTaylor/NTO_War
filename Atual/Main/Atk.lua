@@ -2,19 +2,19 @@ setDefaultTab("Atk")
 
 local function Combo()
  if not g_game.isAttacking() then return false end
-  say(storage.magia400)
-  say(storage.magiabijuu)
-  say(storage.magia300)
   say(storage.magia200)
+  say(storage.magiabijuu)
+  say(storage.magia400)
+  say(storage.magia300)
   say(storage.magia250)
 end
 
 local function Combonstack()
  if not g_game.isAttacking() then return false end
-  say(storage.spellextra)
+   say(storage.magia200)
   say(storage.magiabijuu)
+  say(storage.spellextra)
   say(storage.magia300)
-  say(storage.magia200)
   say(storage.magia250)
 end
 
