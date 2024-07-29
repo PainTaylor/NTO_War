@@ -9,6 +9,15 @@ local function Combo()
   say(storage.magia250)
 end
 
+local function Combonstack()
+ if not g_game.isAttacking() then return false end
+  say(storage.spellextra)
+  say(storage.magiabijuu)
+  say(storage.magia300)
+  say(storage.magia200)
+  say(storage.magia250)
+end
+
 local function Combo2()
  if not g_game.isAttacking() then return false end
   say(storage.magia400)
@@ -25,12 +34,22 @@ macro(200, 'combo', function()
   end
 end)
 
+
+
 macro(200, 'combo2', function()
   if not g_game.isAttacking() then return end
   if storage.atkdelay < now then
     Combo2()
   end
 end)
+
+macro(200, 'combo n Stack', function()
+  if not g_game.isAttacking() then return end
+  if storage.atkdelay < now then
+    Combonstack()
+  end
+end)
+
 
 
 macro(200, 'comboSpecial', function()
