@@ -71,7 +71,63 @@ onTextMessage(function(mode, text)
     endindex = text:find('VIP')
     if startindex and endindex then
       class = text:sub(startindex+4, endindex-3)
-      say('!setvoc ' .. class)
+      if class:find('Sasuke') then
+        setvocSasuke()
+      end
+      if class:find('Chino') then
+        setvocChino()
+      end
+      if class:find('Madara') then
+        setvocMadara()
+      end
+      if class:find('Shisui') then
+        setvocShisui()
+      end
+      if class == 'Tobirama' then
+        setvocTobirama()
+      end
+      if class:find('Indra') then
+        setvocIndra()
+      end
+      if class:find('Koji Kashin') then
+        setvocKojikashin()
+      end
+      if class:find('Maito') then
+        setvocMaito()
+      end
+      if class:find('Kaguya Otsutsuki') then
+        setvocKaguya()
+      end
+      if class:find('Itachi') then
+        setvocItachi()
+      end
+      if class:find('Momoshiki') then
+        setvocMomoshiki()
+      end
+      if class:find('Orochimaru') then
+        setvocOrochimaru()
+      end
+      if class:find('Sandaime Raikage') then
+        setvocSRaikage()
+      end
+      if class:find('Code') then
+        setvocCode()
+      end
+      if class == 'Tobi' then
+        setvocTobi()
+      end
+      if class:find('Sarada') then
+        setvocSarada()
+      end
+      if class:find('Tsunade') then
+        setvocTsunade()
+      end
+      if class:find('Naruto Barion') then
+        setvocNaruto()
+      end
+      if class:find('Kawaki') then
+        setvocKawaki()
+      end
       loadvoc = true
     end
   end
@@ -90,7 +146,8 @@ setvocSasuke = function()
   storage.buff = 'Susanoo Protection'
   storage.buff2 = 'Susanoo Kagutsuchi'
   storage.AOE = 'Fenikkusufurawatekunikku'
-  info('Load: Sasuke')
+  personagem = 'Sasuke'
+  info('Load: ' .. personagem)
 end
 
 
@@ -107,7 +164,8 @@ setvocChino = function()
   storage.buff = 'Susanoo Protection'
   storage.buff2 = 'Susanoo Kagutsuchi'
   storage.AOE = 'Shabontama ninjutsu'
-  info('Load: Chino')
+  personagem = 'Chino'
+  info('Load: ' .. personagem)
 end
 
 setvocMadara = function()
@@ -123,7 +181,8 @@ setvocMadara = function()
   storage.buff = 'Madara Susanoo'
   storage.buff2 = 'Pafekutosusanoo'
   storage.AOE = 'Gureto fureimu furawa'
-  info('Load: Madara')
+  personagem = 'Madara'
+  info('Load: ' .. personagem)
 end
 
 setvocShisui = function()
@@ -139,7 +198,8 @@ setvocShisui = function()
   storage.buff = 'Sharingan Kotetsu'
   storage.buff2 = nil  
   storage.AOE = 'Shunka Shuto'
-  info('Load: Shisui')
+  personagem = 'Shisui'
+  info('Load: ' .. personagem)
 end
 
 setvocTobirama = function()
@@ -156,7 +216,8 @@ setvocTobirama = function()
   storage.buff = 'Suiro no Muchi'
   storage.buff2 = 'Mawashi no Jutsu'
   storage.AOE = 'Dai Suiton Dragon no Jutsu'
-  info('Load: Tobirama')
+  personagem = 'Tobirama'
+  info('Load: ' .. personagem)
 end
 
 setvocIndra = function()
@@ -173,7 +234,8 @@ setvocIndra = function()
   storage.buff = 'Indra: susanoo'
   storage.buff2 = 'Ninshuu Hono'
   storage.AOE = 'Mangekyou Amaterasu'
-  info('Load: Indra')
+  personagem = 'Indra'
+  info('Load: ' .. personagem)
 end
 
 setvocKojikashin = function()
@@ -190,7 +252,8 @@ setvocKojikashin = function()
   storage.buff = 'Hamittomodo'
   storage.buff2 = "Kanzen'naru sen'nin modo"
   storage.AOE = 'Mangekyou Amaterasu'
-  info('Load: Koji')
+  personagem = 'KashinKoji'
+  info('Load: ' .. personagem)
 end
 
 setvocMaito = function()
@@ -207,7 +270,8 @@ setvocMaito = function()
   storage.buff = "Open Gates Of Life"
   storage.buff2 = "Open Gates Of Death"
   storage.AOE = 'Konoha Reppu'
-  info('Load: Maito')
+  personagem = 'Maito'
+  info('Load: ' .. personagem)
 end
 
 setvocKaguya = function()
@@ -224,7 +288,8 @@ setvocKaguya = function()
   storage.buff = "Rinne Sharingan"
   storage.buff2 = "Kankaku-teki tekunikku"
   storage.AOE = 'Yachihoko no Kami'
-  info('Load: Kaguya')
+  personagem = 'Kaguya'
+  info('Load: ' .. personagem)
 end
 
 setvocItachi = function()
@@ -241,7 +306,8 @@ setvocItachi = function()
   storage.buff = "Fuumetsu Susanoo"
   storage.buff2 = "Kankaku-teki tekunikku"
   storage.AOE = 'Mangekyou Amaterasu'
-  info('Load: Itachi')
+  personagem = 'Itachi'
+  info('Load: ' .. personagem)
 end
 
 setvocMomoshiki = function()
@@ -258,7 +324,8 @@ setvocMomoshiki = function()
   storage.buff = "Kinniku kakucho"
   storage.buff2 = "Saishu keitai otsutsuki"
   storage.AOE = 'Yakusa-no-Ikazuchi'
-  info('Load: Momoshiki')
+  personagem = 'Momoshiki'
+  info('Load: ' .. personagem)
 end
 
 setvocOrochimaru = function()
@@ -275,7 +342,8 @@ setvocOrochimaru = function()
   storage.buff = "Noroi shirushi"
   storage.buff2 = "Orochi no noroi"
   storage.AOE = 'Mandara no Jin'
-  info('Load: Orochimaru')
+  personagem = 'Orochimaru'
+  info('Load: ' .. personagem)
 end
 
 setvocSRaikage = function()
@@ -293,7 +361,8 @@ setvocSRaikage = function()
   storage.buff = "Raitoningusutairuchakuramodo"
   storage.buff2 = "Massuguna inazuma"
   storage.AOE = 'Boryoku-tekina inazuma yoko'
-  info('Load: S. Raikage')
+  personagem = 'S.Raikage'
+  info('Load: ' .. personagem)
 end
 
 setvocCode = function()
@@ -311,7 +380,8 @@ setvocCode = function()
   storage.buff = "Howaitokaruma"
   storage.buff2 = "Kosho shita reseputakuru"
   storage.AOE = 'Karumahowaitoparusu'
-  info('Load: Code')
+  personagem = 'Code'
+  info('Load: ' .. personagem)
 end
 
 setvocTobi = function()
@@ -329,7 +399,8 @@ setvocTobi = function()
   storage.buff = 'Akuma no zo no hogo'
   storage.buff2 = 'Uchi wa kikan'
   storage.AOE = 'Fenikkusufurawatekunikku'
-  info('Load: Tobi')
+  personagem = 'Tobi'
+  info('Load: ' .. personagem)
 end
 
 
@@ -348,7 +419,8 @@ setvocSarada = function()
   storage.buff = 'Sarada: susanoo'
   storage.buff2 = nil
   storage.AOE = 'Fenikkusufurawatekunikku'
-  info('Load: Sarada')
+  personagem = 'Sarada'
+  info('Load: ' .. personagem)
 end
 
 setvocTsunade = function()
@@ -368,7 +440,8 @@ setvocTsunade = function()
   storage.buff = 'Sozo no saisei'
   storage.buff2 = 'In no fuin: Kaijo'
   storage.AOE = 'Kentoshiki shogai'
-  info('Load: Tsunade')
+  personagem = 'Tsunade'
+  info('Load: ' .. personagem)
 end
 
 setvocNaruto = function()
@@ -387,7 +460,8 @@ setvocNaruto = function()
   storage.buff = 'Kurama Protection'
   storage.buff2 = 'Baryon Mode'
   storage.AOE = 'Baryon Mode: Dankotaru ken'
-  info('Load: Naruto')
+  personagem = 'Naruto'
+  info('Load: ' .. personagem)
 end
 
 setvocKawaki = function()
@@ -406,7 +480,8 @@ setvocKawaki = function()
   storage.buff = 'Karma Protection'
   storage.buff2 = 'Burst Mode'
   storage.AOE = nil
-  info('Load: Kawaki')
+  personagem = 'Kawaki'
+  info('Load: ' .. personagem)
 end
 
 
