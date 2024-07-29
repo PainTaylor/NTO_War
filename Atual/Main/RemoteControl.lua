@@ -318,11 +318,11 @@ local setStanceMode = g_game.setChaseMode;
     end
     if text == 'enemyon' then
       chicletao.setOn()
-      g_game:setSafeFight(0)
+      g_game.setSafeFight(0)
     end
     if text == 'enemyoff' then
       chicletao.setOff()
-      g_game:setSafeFight(1)
+      g_game.setSafeFight(1)
     end
 end)
 
