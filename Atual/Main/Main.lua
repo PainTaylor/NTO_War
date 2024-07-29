@@ -210,10 +210,10 @@ end);
 
 local discordTimes = {}
  -- insert your webhook link below
-local WH0 = "https://discord.com/api/webhooks/1229409297155231845/WSYK3iGJ4at3Q8L9dQo4YB2JhTBU9_8vUjXFY9JbUT-bdv0mQp_mdf01Qq9y4hUtvVJL"
+local WH0 = "https://discord.com/api/webhooks/1267540187647578255/jPVMuU6vhwbOtBkYKtwUJfr9eKa5CYZ4YwvEevgQqMX93hI_I-8DawYWAyNpo4fXwnY4"
 
 local dd3 = {
-  username = "MeliantenaCave", -- name discord displays the message from
+  username = "Avistados Por Chars", -- name discord displays the message from
 }
 
 local embed = {
