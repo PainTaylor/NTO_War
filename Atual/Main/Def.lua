@@ -65,6 +65,7 @@ end)
 macro(1000, 'Buff Spam', function()
   say(storage.buff)
 end)
+
 storage.timebuff = now
 macro(1000, 'Buff 30Sec', function()
   if storage.timebuff < now then
@@ -75,7 +76,13 @@ end)
 
 ------------------------------------------------------
 
-macro(1000, 'Buff2', function()
+macro(200, 'Buff2', function()
+  if hasPartyBuff() and storage.tbuff2 < now then
+    say(storage.buff2)
+  end
+end)
+
+macro(1000, 'Buff2 Spam', function()
   if hasPartyBuff() and storage.tbuff2 < now then
     say(storage.buff2)
   end
