@@ -193,7 +193,7 @@ macro(100, 'Target', function()
  end
 end)
 
-macro(1, "Chicletinho 90%", function()
+chicletao = macro(1, "Chicletinho 90%", function()
 
 for _,pla in ipairs(getSpectators(posz())) do
 
@@ -226,7 +226,7 @@ end
 
 
 
-chicletao = macro(1, 'Chiclete Ryan', function()
+macro(1, 'Chiclete Ryan', function()
   local possibleTarget = false
   for _, creature in ipairs(getSpectators(posz())) do
     local specHP = creature:getHealthPercent()
