@@ -69,9 +69,11 @@ storage.timebuff = now
 macro(1000, 'Buff 30Sec', function()
   if storage.timebuff < now then
     say(storage.buff)
-    storage.timebuff = now + 30000
+    storage.timebuff = now + 60000
   end
 end)
+
+------------------------------------------------------
 
 macro(1000, 'Buff2', function()
   if hasPartyBuff() and storage.tbuff2 < now then
@@ -83,7 +85,7 @@ storage.tbuff2 = now
 onTalk(function(name, level, mode, text, channelId, pos)
 if name ~= player:getName() then return end
 if text == storage.buff2 and storage.tbuff2 < now then
-  storage.tbuff2 = now + 30000
+  storage.tbuff2 = now + 60000
 end
 end)
 
