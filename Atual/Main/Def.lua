@@ -15,14 +15,6 @@ healmacro = macro(200, 'heal', function()
   end
  end)
 
-storage.exaustheal = now
-storage.Bigheal = 'otsutsuki regeneration'
-healmacro = macro(200, 'Bigger Heal', function()
-  if hppercent() < 99 and storage.exaustheal < now then
-    say(storage.Bigheal)
-  end
- end)
-
 
 storage.defensekeep = now
 macro(200, 'Chakra Defense', function()
@@ -65,9 +57,20 @@ end)
 UI.Separator()
 
 UI.Label('Buff')
-macro(200, 'buff', function()
+macro(200, 'Buff Party', function()
   if hasPartyBuff() then return end
   say(storage.buff)
+end)
+
+macro(1000, 'Buff Spam', function()
+  say(storage.buff)
+end)
+storage.timebuff = now
+macro(1000, 'Buff 30Sec', function()
+  if storage.timebuff < now then
+    say(storage.buff)
+    storage.timebuff = now + 30000
+  end
 end)
 
 macro(1000, 'Buff2', function()
@@ -80,7 +83,7 @@ storage.tbuff2 = now
 onTalk(function(name, level, mode, text, channelId, pos)
 if name ~= player:getName() then return end
 if text == storage.buff2 and storage.tbuff2 < now then
-  storage.tbuff2 = now + 40000
+  storage.tbuff2 = now + 30000
 end
 end)
 
