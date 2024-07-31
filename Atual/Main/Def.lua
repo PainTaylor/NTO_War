@@ -7,7 +7,11 @@ onTextMessage(function(mode, text)
     storage.healspell = 'big regeneration'
   end
 end)
-
+macro(2000, function()
+  if player:getLevel() < 450 then
+    storage.healspell == 'big regeneration'
+  end
+end)
 
 healmacro = macro(200, 'heal', function()
   if hppercent() < 99 and storage.exaustheal < now then
