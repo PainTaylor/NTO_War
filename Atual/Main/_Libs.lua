@@ -63,6 +63,9 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Minato') then
         setvocMinato()
       end
+      if text:find('Muu') then
+        setvocMuu()
+      end
     end
   end
 end)
@@ -529,6 +532,27 @@ setvocMinato = function()
   storage.buff2 = 'Tsudzurao chakuramodo'
   storage.AOE = nil
   personagem = 'Minato'
+  info('Load: ' .. personagem)
+end
+
+setvocMuu = function()
+  storage.magia200 = 'Gensho sekai ridatsu'
+  storage.magia250 = 'Gensho sekai no disupureisumento'
+  storage.magia300 = 'Genshi sekai no sutotchatekunikku'
+  storage.magia400 = 'Raitorokkutekunikku'
+  storage.magiabijuu = 'Biju Attack'
+  storage.spellextra = 'Shuriken Kogeki'
+  storage.special1 = 'Irokkutekunikku'
+  storage.special2 = 'Fukaina hokori no nai'
+  storage.special3 = 'Bunkatsu tekunikku'
+  storage.special4 = nil
+  storage.magiastack = nil
+  storage.fugaspell = ''
+  storage.SHEAL = nil
+  storage.buff = 'Sutairupaudapurotekushon'
+  storage.buff2 = 'Bunkatsu tekunikku'
+  storage.AOE = 'Ishi no sutairu'
+  personagem = 'Muu'
   info('Load: ' .. personagem)
 end
 
