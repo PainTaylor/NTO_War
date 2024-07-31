@@ -66,6 +66,9 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Muu') then
         setvocMuu()
       end
+      if text:find('Anko') then
+        setvocAnko()
+      end
     end
   end
 end)
@@ -142,10 +145,14 @@ onTextMessage(function(mode, text)
       if text:find('Muu') then
         setvocMuu()
       end
+      if text:find('Anko') then
+        setvocAnko()
+      end
       loadvoc = true
     end
   end
 end)
+
 --Ordem Keys S1=R S2 = F S3 = X S4 = 1
 setvocSasuke = function()
   storage.magia200 = 'Indoranoya'
@@ -558,6 +565,28 @@ setvocMuu = function()
   personagem = 'Muu'
   info('Load: ' .. personagem)
 end
+
+setvocAnko = function()
+  storage.magia200 = 'Kyodaina jihebi'
+  storage.magia250 = 'Megasuneku'
+  storage.magia300 = 'Hebi no kuchi'
+  storage.magia400 = 'Takusan no hebi'
+  storage.magiabijuu = 'Biju Attack'
+  storage.spellextra = nil
+  storage.special1 = 'Mahi suru hebi'
+  storage.special2 = 'Tsuinsuneku sogo'
+  storage.special3 = 'Noroi shirushi henshini'
+  storage.special4 = nil
+  storage.magiastack = nil
+  storage.fugaspell = 'Tsuinsuneku sogo'
+  storage.SHEAL = nil
+  storage.buff = 'Norowareta fuin'
+  storage.buff2 = 'Noroi shirushi henshini'
+  storage.AOE = 'Mandara no Jin'
+  personagem = 'Anko'
+  info('Load: ' .. personagem)
+end
+
 
 
 g_game.look(player)
