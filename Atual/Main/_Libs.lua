@@ -139,6 +139,9 @@ onTextMessage(function(mode, text)
       if class:find('Minato') then
         setvocMinato()
       end
+      if text:find('Muu') then
+        setvocMuu()
+      end
       loadvoc = true
     end
   end
