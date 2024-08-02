@@ -581,7 +581,7 @@ setvocAnko = function()
   storage.fugaspell = 'Tsuinsuneku sogo'
   storage.SHEAL = nil
   storage.buff = 'Norowareta fuin'
-  storage.buff2 = 'Noroi shirushi henshini'
+  storage.buff2 = 'Noroi shirushi henshin'
   storage.AOE = 'Mandara no Jin'
   personagem = 'Anko'
   info('Load: ' .. personagem)
@@ -590,3 +590,5 @@ end
 
 
 g_game.look(player)
+
+
