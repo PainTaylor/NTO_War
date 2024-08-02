@@ -87,9 +87,7 @@ macro(200, 'Buff2', function()
 end)
 
 macro(1000, 'Buff2 Spam', function()
-  if hasPartyBuff() and storage.tbuff2 < now then
     say(storage.buff2)
-  end
 end)
 
 storage.tbuff2 = now
