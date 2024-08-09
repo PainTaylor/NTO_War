@@ -69,6 +69,9 @@ onTalk(function(name, level, mode, text, channelId, pos)
       if text:find('Anko') then
         setvocAnko()
       end
+      if text:find('Menma') then
+        setvocMenma()
+      end
     end
   end
 end)
@@ -146,6 +149,9 @@ onTextMessage(function(mode, text)
         setvocMuu()
       end
       if text:find('Anko') then
+        setvocAnko()
+      end
+      if text:find('Menma') then
         setvocAnko()
       end
       loadvoc = true
@@ -584,6 +590,27 @@ setvocAnko = function()
   storage.buff2 = 'Noroi shirushi henshin'
   storage.AOE = 'Mandara no Jin'
   personagem = 'Anko'
+  info('Load: ' .. personagem)
+end
+
+setvocMenma = function()
+  storage.magia200 = 'Guretorasenringu'
+  storage.magia250 = 'Hanpatsu'
+  storage.magia300 = 'Chakura no shukaku'
+  storage.magia400 = 'Hotai o kiru'
+  storage.magiabijuu = 'Biju Attack'
+  storage.spellextra = nil
+  storage.special1 = 'Insutantoshifuto'
+  storage.special2 = 'Negatibusenshingu'
+  storage.special3 = 'Menma Rinnegan'
+  storage.special4 = 'Kuchiyose Kuro Kyuubi'
+  storage.magiastack = nil
+  storage.fugaspell = 'Negatibusenshingu'
+  storage.SHEAL = nil
+  storage.buff = 'Kyuubi Protect'
+  storage.buff2 = 'Menma Rinnegan'
+  storage.AOE = 'Nanboku kanmon'
+  personagem = 'Menma'
   info('Load: ' .. personagem)
 end
 
