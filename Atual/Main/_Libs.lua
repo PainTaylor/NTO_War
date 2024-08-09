@@ -152,7 +152,7 @@ onTextMessage(function(mode, text)
         setvocAnko()
       end
       if text:find('Menma') then
-        setvocAnko()
+        setvocMenma()
       end
       loadvoc = true
     end
